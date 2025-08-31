@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <h1>QuizGo!</h1>
+    <form id="registro-form">
+        <label class="skibidi" for="username">Usuario:</label>
+        <input class="cr7" type="text" id="username" name="username" required>
+        <br>
+        <label class="skibidi" for="password">Contraseña:</label>
+        <input class="cr7" type="password" id="password" name="password" required>
+        <br>
+        <button type="submit" value="registro">Registrarse</button>
+        <a href="#" id="mostrar-login">¿Ya tienes una cuenta? Iniciar sesión</a>
+        <div>
+            <b class="comunicate">comunicate con nosotros por:</b>
+        </div>
+        <div class="ig-container">
+            <a class="ig" href="https://www.instagram.com/cld.niko/">nikoo</a>
+            <a class="ig" href="https://www.instagram.com/el.zuze/">zuzee</a>
+        </div>
+    </form>
+    <!-- Mueve el botón aquí, fuera del form -->
+    <button id="cambiar-tema" style="margin-bottom: 1rem;">Cambiar tema</button>
+
+    <!-- Botón para jugar como invitado -->
+    <button id="jugar-invitado" style="margin-bottom: 1rem;">Jugar como invitado</button>
+
+    <form id="login-form" style="display:none;">
+        <label class="skibidi" for="login-username">Usuario:</label>
+        <input class="cr7" type="text" id="login-username" name="login-username" required>
+        <br>
+        <label class="skibidi" for="login-password">Contraseña:</label>
+        <input class="cr7" type="password" id="login-password" name="login-password" required>
+        <br>
+        <button type="submit" value="login">Iniciar sesión</button>
+        <a href="#" id="mostrar-registro">¿No tienes cuenta? Registrarse</a>
+        <button type="submit" value="login">Iniciar sesión</button>
+       
+    </form>
+    <div id="quiz-container" style="display:none;">
+        <div class="quiz-config">
+            <h2 id="bienvenida-usuario">¡Bienvenido!</h2>
+            <div class="config-row">
+                <label>Elige temática:</label>
+                <select id="select-tema">
+                    <option value="cultura">Cultura general</option>
+                    <option value="historia">Historia</option>
+                    <option value="lenguaje">Lenguaje</option>
+                </select>
+            </div>
+            <div class="config-row">
+                <label>Elige dificultad:</label>
+                <label><input type="radio" id="easy" name="dificultad" value="easy" checked> Fácil</label>
+                <label><input type="radio" id="medium" name="dificultad" value="medium"> Medio</label>
+                <label><input type="radio" id="hard" name="dificultad" value="hard"> Difícil</label>
+            </div>
+      
+            <div class="config-row">
+                <button id="comenzar-quiz">Comenzar Quiz</button>
+            </div>
+
+            <div class="usuario-estadisticas">
+                <p id="puntaje-usuario">Puntos totales: <span id="puntos-totales">0</span></p>
+                <p id="recompensas-desbloqueadas">Recompensas desbloqueadas: <span id="recompensas-list">—</span></p>
+            </div>
+        </div>
+
+        <div class="quiz-pregunta" style="display:none;">
+            <div id="pregunta-texto" class="pregunta-texto"></div>
+            <div id="opciones" class="opciones"></div>
+            <div style="margin-top:1rem;">
+                <button id="siguiente-pregunta" style="display:none;">Siguiente</button>
+                <button id="regresar-config" style="margin-left:1rem;">Regresar</button>
+            </div>
+        </div>
+
+        <div class="quiz-final" style="display:none;">
+            <h2>¡Quiz finalizado!</h2>
+            <p id="resultado"></p>
+            <button id="reiniciar-quiz">Volver a jugar</button>
+        </div>
+    </div>
+    <script src="funciones.js"></script>
+</body>
+</html>
