@@ -483,7 +483,8 @@ const preguntas = {
                 pregunta: "¿Qué palabra es un sustantivo abstracto?",
                 opciones: ["Mesa", "Belleza", "Perro", "Casa"],
                 respuesta: 1
-            }
+            },
+
         ]
     }
 };
@@ -578,3 +579,222 @@ document.getElementById('jugar-invitado').addEventListener('click', function(e) 
     localStorage.setItem('usuario', 'Invitado');
     entrarAlQuiz("invitado");
 });
+
+
+const nuevasTematicas = {
+  deporte: {
+    easy: [
+      { pregunta: "¿Cuántos jugadores hay en un equipo de baloncesto en pista?", opciones: ["5","6","7","11"], respuesta: 0 },
+      { pregunta: "¿En qué deporte se usa un bate y una pelota y hay bases?", opciones: ["Rugby","Béisbol","Tenis","Hockey"], respuesta: 1 },
+      { pregunta: "¿Cuántos minutos dura un partido de fútbol (sin tiempo añadido)?", opciones: ["80","90","100","70"], respuesta: 1 },
+      { pregunta: "¿Qué deporte utiliza una raqueta y una red y se juega individual o dobles?", opciones: ["Tenis","Golf","Natación","Boxeo"], respuesta: 0 },
+      { pregunta: "¿En qué deporte se marca un 'try'?", opciones: ["Fútbol americano","Rugby","Baloncesto","Hockey"], respuesta: 1 },
+      { pregunta: "¿Cuál es un deporte olímpico de agua?", opciones: ["Remo","Cricket","Squash","Billar"], respuesta: 0 },
+      { pregunta: "¿Qué deporte tiene rondas y nocaut como objetivo?", opciones: ["Boxeo","Golf","Badminton","Atletismo"], respuesta: 0 }
+    ],
+    medium: [
+      { pregunta: "¿Cuántos sets se juegan habitualmente en un partido de tenis masculino en Grand Slams?", opciones: ["3","5","6","4"], respuesta: 1 },
+      { pregunta: "¿Qué país domina históricamente el rugby de las 'Seis Naciones'?", opciones: ["Nueva Zelanda","Inglaterra","Sudáfrica","Australia"], respuesta: 1 },
+      { pregunta: "¿Qué marca el término 'birdie' en golf?", opciones: ["Dos golpes sobre par","Un golpe bajo par","Un golpe sobre par","Un golpe en par"], respuesta: 1 },
+      { pregunta: "¿Cuántos jugadores hay en un equipo de voleibol en cancha?", opciones: ["5","6","7","4"], respuesta: 1 },
+      { pregunta: "En atletismo, ¿cuántos metros tiene una carrera de medio fondo clásica?", opciones: ["400m","800m","1500m","5000m"], respuesta: 1 },
+      { pregunta: "¿Qué disciplina combina esquí de fondo y tiro con rifle?", opciones: ["Combinada nórdica","Biathlon","Pentatlón","Esquí alpino"], respuesta: 1 },
+      { pregunta: "¿Qué ventana de puntuación tiene el boxeo profesional por asalto?", opciones: ["10-9","9-9","8-8","10-8"], respuesta: 0 }
+    ],
+    hard: [
+      { pregunta: "¿Quién tiene el récord mundial de los 100m lisos (hombres)?", opciones: ["Usain Bolt","Tyson Gay","Yohan Blake","Justin Gatlin"], respuesta: 0 },
+      { pregunta: "¿En qué año se celebraron los primeros juegos olímpicos modernos?", opciones: ["1896","1900","1888","1912"], respuesta: 0 },
+      { pregunta: "¿Qué país ganó la Copa Davis por primera vez en 1903?", opciones: ["EE. UU.","Reino Unido","Francia","Australia"], respuesta: 0 },
+      { pregunta: "¿Cuál es la distancia oficial del maratón en metros?", opciones: ["42195","40000","42600","42100"], respuesta: 0 },
+      { pregunta: "¿Qué atleta batió el récord mundial de salto de longitud en 1991 con 8.95m?", opciones: ["Mike Powell","Bob Beamon","Carl Lewis","Ivan Pedroso"], respuesta: 0 },
+      { pregunta: "¿Qué equipo ganó la primera Champions League de la era moderna (1992/93)?", opciones: ["Milan","Barcelona","Olympique de Marsella","PSV"], respuesta: 0 },
+      { pregunta: "¿Cuál es la leyenda futbolística con más Balones de Oro (hasta 2024)?", opciones: ["Cristiano Ronaldo","Lionel Messi","Johan Cruyff","Michel Platini"], respuesta: 1 }
+    ]
+  },
+
+  futbol: {
+    easy: [
+      { pregunta: "¿Cuántos jugadores hay en campo por equipo en fútbol 11?", opciones: ["9","10","11","12"], respuesta: 2 },
+      { pregunta: "¿Qué país ganó el Mundial 2018?", opciones: ["Alemania","Argentina","Francia","Brasil"], respuesta: 2 },
+      { pregunta: "¿Cuál es el objetivo del portero?", opciones: ["Marcar goles","Detener goles","Dar asistencias","Sacar córners"], respuesta: 1 },
+      { pregunta: "¿Cómo se llama la máxima competición de clubes en Europa?", opciones: ["Europa League","Champions League","Supercopa","Copa Libertadores"], respuesta: 1 },
+      { pregunta: "¿Qué color de tarjeta implica expulsión directa en general?", opciones: ["Amarilla","Roja","Verde","Azul"], respuesta: 1 },
+      { pregunta: "¿Qué significa 'offside' en español?", opciones: ["Fuera de juego","Falta","Gol válido","Penalti"], respuesta: 0 },
+      { pregunta: "¿Cuánto dura un tiempo reglamentario en fútbol?", opciones: ["30 min","45 min","40 min","60 min"], respuesta: 1 }
+    ],
+    medium: [
+      { pregunta: "¿Quién es el máximo goleador de la selección argentina histórica (hasta 2024)?", opciones: ["Gabriel Batistuta","Lionel Messi","Sergio Agüero","Diego Maradona"], respuesta: 1 },
+      { pregunta: "¿Qué entrenador ganó la Champions con el Real Madrid en 2018?", opciones: ["Zidane","Mourinho","Ancelotti","Guardiola"], respuesta: 0 },
+      { pregunta: "¿Qué club tiene más títulos de LaLiga (España)?", opciones: ["Barcelona","Real Madrid","Atletico Madrid","Valencia"], respuesta: 1 },
+      { pregunta: "¿Qué país organizó el Mundial 2014?", opciones: ["Brasil","Sudáfrica","Rusia","Alemania"], respuesta: 0 },
+      { pregunta: "¿Qué significa 'hat-trick'?", opciones: ["Tres goles en un partido","Tres asistencias","Tres tarjetas","Tres penaltis"], respuesta: 0 },
+      { pregunta: "¿Cuántos clubes disputan la Premier League (temporada clásica)?", opciones: ["18","20","22","24"], respuesta: 1 },
+      { pregunta: "¿Qué torneo sudamericano juegan selecciones de América del Sur?", opciones: ["Copa América","Nations League","Eurocopa","CONCACAF Gold Cup"], respuesta: 0 }
+    ],
+    hard: [
+      { pregunta: "¿Quién ganó el Balón de Oro en 1999?", opciones: ["Rivaldo","Ronaldo","Zinedine Zidane","Luis Figo"], respuesta: 0 },
+      { pregunta: "¿Cuál es el estadio con mayor capacidad de Europa (aprox.)?", opciones: ["Camp Nou","Wembley","Old Trafford","Santiago Bernabéu"], respuesta: 0 },
+      { pregunta: "¿En qué año se jugó el primer mundial de fútbol?", opciones: ["1924","1930","1934","1950"], respuesta: 1 },
+      { pregunta: "¿Qué selección ganó la Eurocopa 2004 sorpresivamente?", opciones: ["Grecia","Portugal","Italia","Francia"], respuesta: 0 },
+      { pregunta: "¿Quién es el máximo goleador en la historia de los mundiales?", opciones: ["Ninguno","Just Fontaine","Pelé","Miroslav Klose"], respuesta: 3 },
+      { pregunta: "¿Cuál es el máximo goleador histórico de la Champions League (hasta 2024)?", opciones: ["Cristiano Ronaldo","Lionel Messi","Raúl","Karim Benzema"], respuesta: 0 },
+      { pregunta: "¿Qué técnico inventó la táctica 'catenaccio'?", opciones: ["Helenio Herrera","Giovanni Trapattoni","Arrigo Sacchi","Nereo Rocco"], respuesta: 3 }
+    ]
+  },
+
+  metal: {
+    easy: [
+      { pregunta: "¿Qué instrumento es básico en la mayoría de bandas de metal?", opciones: ["Saxofón","Guitarra eléctrica","Flauta","Piano"], respuesta: 1 },
+      { pregunta: "¿Qué subgénero es conocido por voces muy graves y agresivas?", opciones: ["Death metal","Pop","Country","Reggae"], respuesta: 0 },
+      { pregunta: "¿Qué banda es considerada pionera del heavy metal (UK)?", opciones: ["Black Sabbath","The Beatles","ABBA","Queen"], respuesta: 0 },
+      { pregunta: "¿Qué elemento es típico en la estética del metal?", opciones: ["Trajes formales","Pelo largo y cuero","Sombreros de copa","Trajes de baño"], respuesta: 1 },
+      { pregunta: "¿Qué técnica en guitarra usa 'power chords' frecuentemente?", opciones: ["Fingerpicking","Power chords","Arco","Sordina"], respuesta: 1 },
+      { pregunta: "¿Qué instrumento marca la base rítmica junto con la batería?", opciones: ["Bajo eléctrico","Piano","Violonchelo","Sitar"], respuesta: 0 },
+      { pregunta: "¿Cuál es un tema común en letras de metal?", opciones: ["Amor ligero","Fantasía y conflicto","Recetas","Noticias locales"], respuesta: 1 }
+    ],
+    medium: [
+      { pregunta: "¿Qué banda lanzó el álbum 'Master of Puppets'?", opciones: ["Metallica","Iron Maiden","Megadeth","Slayer"], respuesta: 0 },
+      { pregunta: "¿Qué término describe la velocidad y técnica rápida en guitarra metal?", opciones: ["Shredding","Strumming","Plucking","Pizzicato"], respuesta: 0 },
+      { pregunta: "¿Qué banda es famosa por su mascot 'Eddie' en las portadas?", opciones: ["Iron Maiden","Metallica","Black Sabbath","Judas Priest"], respuesta: 0 },
+      { pregunta: "¿Qué subgénero mezcla thrash y speed con técnica instrumental veloz?", opciones: ["Doom metal","Thrash metal","Funk","Ska"], respuesta: 1 },
+      { pregunta: "¿Qué festival es famoso por reunir bandas metal en Alemania?", opciones: ["Wacken Open Air","Glastonbury","Coachella","Lollapalooza"], respuesta: 0 },
+      { pregunta: "¿Qué bajista creó líneas rítmicas icónicas en metal (ej: Cliff Burton)?", opciones: ["Cliff Burton","Paul McCartney","John Deacon","Flea"], respuesta: 0 },
+      { pregunta: "¿Qué técnica vocal se usa a menudo en black metal (voz aguda y rasgada)?", opciones: ["Clean","Screaming/ shriek","Opera","Rap"], respuesta: 1 }
+    ],
+    hard: [
+      { pregunta: "¿Qué álbum de Black Sabbath se considera fundacional del heavy metal (1970)?", opciones: ["Paranoid","Black Sabbath","Master of Reality","Vol. 4"], respuesta: 1 },
+      { pregunta: "¿Qué productor trabajó con Metallica en 'Metallica (The Black Album)'?", opciones: ["Bob Rock","Rick Rubin","Mutt Lange","Phil Spector"], respuesta: 0 },
+      { pregunta: "¿Qué técnica de afinación baja es habitual en doom y sludge metal?", opciones: ["Drop D/Drop C","Standard E","Open G","Drop A"], respuesta: 0 },
+      { pregunta: "¿Qué banda noruega impulsó la segunda ola del black metal?", opciones: ["Mayhem","AC/DC","The Clash","The Police"], respuesta: 0 },
+      { pregunta: "¿Qué sello independiente es conocido por el metal extremo en Noruega?", opciones: ["Peaceville","Nuclear Blast","Century Media","Earache"], respuesta: 0 },
+      { pregunta: "¿Qué elemento lírico se encuentra frecuentemente en power metal?", opciones: ["Mitología y fantasía","Noticias políticas","Recetas","Manualidades"], respuesta: 0 },
+      { pregunta: "¿Qué guitarrista es célebre por su técnica en metal y colaboraciones (ej: Yngwie Malmsteen)?", opciones: ["Yngwie Malmsteen","Eric Clapton","Carlos Santana","BB King"], respuesta: 0 }
+    ]
+  }
+};
+
+Object.assign(preguntas, nuevasTematicas);
+const culturaChilena = {
+  easy: [
+    { pregunta: "¿Cuál es la capital de Chile?", opciones: ["Valparaíso", "Santiago", "Concepción", "Antofagasta"], respuesta: 1 },
+    { pregunta: "¿Qué flor es el símbolo nacional de Chile?", opciones: ["Copihue", "Rosa", "Lirio", "Clavel"], respuesta: 0 },
+    { pregunta: "¿En qué mes se celebran las Fiestas Patrias en Chile?", opciones: ["Julio", "Septiembre", "Octubre", "Noviembre"], respuesta: 1 },
+    { pregunta: "¿Qué océano baña las costas de Chile?", opciones: ["Atlántico", "Pacífico", "Índico", "Ártico"], respuesta: 1 },
+    { pregunta: "¿Qué baile típico se realiza durante las Fiestas Patrias?", opciones: ["Cueca", "Samba", "Tango", "Cumbia"], respuesta: 0 },
+    { pregunta: "¿Qué isla chilena es famosa por sus moáis?", opciones: ["Chiloé", "Isla de Pascua", "Juan Fernández", "Isla Grande"], respuesta: 1 },
+    { pregunta: "¿Qué cordillera atraviesa Chile?", opciones: ["Los Andes", "Himalaya", "Alpes", "Rocosas"], respuesta: 0 }
+  ],
+  medium: [
+    { pregunta: "¿Qué poeta chileno ganó el Premio Nobel de Literatura en 1971?", opciones: ["Pablo Neruda", "Gabriela Mistral", "Vicente Huidobro", "Nicanor Parra"], respuesta: 0 },
+    { pregunta: "¿Qué desierto se encuentra en el norte de Chile?", opciones: ["Sahara", "Atacama", "Gobi", "Kalahari"], respuesta: 1 },
+    { pregunta: "¿Qué plato típico chileno lleva choclo, carne y huevo?", opciones: ["Cazuela", "Pastel de choclo", "Charquicán", "Empanada"], respuesta: 1 },
+    { pregunta: "¿Qué ciudad chilena es conocida como la 'ciudad jardín'?", opciones: ["Valparaíso", "Viña del Mar", "La Serena", "Puerto Montt"], respuesta: 1 },
+    { pregunta: "¿Qué instrumento es típico de la música folclórica chilena?", opciones: ["Charango", "Guitarra", "Zampoña", "Arpa"], respuesta: 0 },
+    { pregunta: "¿Qué bebida alcohólica es típica de Chile?", opciones: ["Pisco", "Tequila", "Ron", "Whisky"], respuesta: 0 },
+    { pregunta: "¿Qué región chilena es famosa por sus viñedos?", opciones: ["Atacama", "Valle Central", "Magallanes", "Araucanía"], respuesta: 1 }
+  ],
+  hard: [
+    { pregunta: "¿En qué año se firmó la independencia de Chile?", opciones: ["1810", "1818", "1821", "1830"], respuesta: 1 },
+    { pregunta: "¿Qué presidente chileno murió durante el golpe de Estado de 1973?", opciones: ["Salvador Allende", "Augusto Pinochet", "Eduardo Frei", "Patricio Aylwin"], respuesta: 0 },
+    { pregunta: "¿Qué poeta chilena ganó el Premio Nobel de Literatura en 1945?", opciones: ["Gabriela Mistral", "Pablo Neruda", "Violeta Parra", "Isabel Allende"], respuesta: 0 },
+    { pregunta: "¿Qué volcán es el más alto de Chile?", opciones: ["Osorno", "Parinacota", "Ojos del Salado", "Villarrica"], respuesta: 2 },
+    { pregunta: "¿Qué batalla marcó el fin de la Guerra del Pacífico?", opciones: ["Batalla de Chorrillos", "Batalla de Arica", "Batalla de Iquique", "Batalla de Huamachuco"], respuesta: 1 },
+    { pregunta: "¿Qué escritor chileno es autor de 'La casa de los espíritus'?", opciones: ["Isabel Allende", "Pablo Neruda", "Gabriela Mistral", "Nicanor Parra"], respuesta: 0 },
+    { pregunta: "¿Qué isla chilena es conocida por su mitología y palafitos?", opciones: ["Isla de Pascua", "Chiloé", "Juan Fernández", "Isla Grande"], respuesta: 1 }
+  ]
+};
+Object.assign(preguntas, { culturaChilena });
+const boxeo = {
+  easy: [
+    { pregunta: "¿Cuántos rounds tiene una pelea de boxeo profesional?", opciones: ["10", "12", "8", "15"], respuesta: 1 },
+    { pregunta: "¿Qué significa un 'KO' en boxeo?", opciones: ["Knock Out", "Knock Over", "Knock Off", "Knock On"], respuesta: 0 },
+    { pregunta: "¿Qué parte del cuerpo está prohibido golpear en el boxeo?", opciones: ["Cabeza", "Cintura", "Espalda", "Pecho"], respuesta: 2 },
+    { pregunta: "¿Qué se utiliza para proteger las manos en el boxeo?", opciones: ["Guantes", "Vendas", "Cinta adhesiva", "Muñequeras"], respuesta: 0 },
+    { pregunta: "¿Qué peso pertenece a la categoría más ligera en boxeo?", opciones: ["Peso pluma", "Peso gallo", "Peso mosca", "Peso ligero"], respuesta: 2 },
+    { pregunta: "¿Qué significa 'jab' en boxeo?", opciones: ["Un golpe recto", "Un golpe cruzado", "Un gancho", "Un uppercut"], respuesta: 0 },
+    { pregunta: "¿Qué se hace en el ring antes de comenzar una pelea?", opciones: ["Saludar al árbitro", "Chocar guantes", "Dar un paso atrás", "Girar en círculo"], respuesta: 1 }
+  ],
+  medium: [
+    { pregunta: "¿Quién es conocido como 'El más grande' en el boxeo?", opciones: ["Mike Tyson", "Muhammad Ali", "Floyd Mayweather", "Sugar Ray Leonard"], respuesta: 1 },
+    { pregunta: "¿Qué categoría de peso está entre peso ligero y peso wélter?", opciones: ["Peso superligero", "Peso medio", "Peso pluma", "Peso crucero"], respuesta: 0 },
+    { pregunta: "¿Qué significa 'TKO' en boxeo?", opciones: ["Technical Knock Out", "Total Knock Out", "Time Knock Out", "Technical Knock On"], respuesta: 0 },
+    { pregunta: "¿Qué boxeador es conocido como 'Iron Mike'?", opciones: ["Mike Tyson", "Evander Holyfield", "George Foreman", "Lennox Lewis"], respuesta: 0 },
+    { pregunta: "¿Qué cinturón es el más prestigioso en el boxeo profesional?", opciones: ["WBC", "IBF", "WBO", "WBA"], respuesta: 0 },
+    { pregunta: "¿Qué boxeador ganó una medalla de oro en los Juegos Olímpicos de 1992?", opciones: ["Oscar De La Hoya", "Floyd Mayweather", "Roy Jones Jr.", "Evander Holyfield"], respuesta: 0 },
+    { pregunta: "¿Qué significa 'uppercut' en boxeo?", opciones: ["Un golpe ascendente", "Un golpe lateral", "Un golpe recto", "Un gancho"], respuesta: 0 }
+  ],
+  hard: [
+    { pregunta: "¿En qué año se celebró la primera pelea de boxeo con reglas modernas?", opciones: ["1867", "1880", "1900", "1850"], respuesta: 0 },
+    { pregunta: "¿Qué boxeador tiene el récord de más defensas consecutivas de un título mundial?", opciones: ["Joe Louis", "Floyd Mayweather", "Rocky Marciano", "Julio César Chávez"], respuesta: 0 },
+    { pregunta: "¿Qué boxeador es conocido como 'Manos de Piedra'?", opciones: ["Roberto Durán", "Sugar Ray Leonard", "Marvin Hagler", "Tommy Hearns"], respuesta: 0 },
+    { pregunta: "¿Qué boxeador fue apodado 'El Matador'?", opciones: ["Ricardo Mayorga", "Félix Trinidad", "Erik Morales", "Wilfredo Gómez"], respuesta: 1 },
+    { pregunta: "¿Qué boxeador fue el primero en ganar títulos mundiales en ocho categorías diferentes?", opciones: ["Manny Pacquiao", "Floyd Mayweather", "Oscar De La Hoya", "Sugar Ray Leonard"], respuesta: 0 },
+    { pregunta: "¿Qué boxeador derrotó a Muhammad Ali en la 'Pelea del Siglo' en 1971?", opciones: ["Joe Frazier", "George Foreman", "Ken Norton", "Larry Holmes"], respuesta: 0 },
+    { pregunta: "¿Qué boxeador es conocido por su invicto récord de 49-0?", opciones: ["Rocky Marciano", "Floyd Mayweather", "Julio César Chávez", "Joe Calzaghe"], respuesta: 0 }
+  ]
+};
+
+Object.assign(preguntas, {
+  boxeo
+});
+const fifaConsola = {
+  easy: [
+    { pregunta: "¿Qué empresa desarrolla el videojuego FIFA?", opciones: ["Konami", "EA Sports", "Ubisoft", "Activision"], respuesta: 1 },
+    { pregunta: "¿Qué modo de juego es el más popular en FIFA?", opciones: ["Carrera", "Ultimate Team", "Volta", "Amistoso"], respuesta: 1 },
+    { pregunta: "¿Qué botón se usa para disparar en la configuración clásica de FIFA?", opciones: ["X", "Círculo", "Cuadrado", "Triángulo"], respuesta: 1 },
+    { pregunta: "¿Qué equipo tiene la mejor valoración en FIFA 23?", opciones: ["Real Madrid", "Manchester City", "PSG", "Bayern Múnich"], respuesta: 2 },
+    { pregunta: "¿Qué significa FUT en FIFA?", opciones: ["FIFA Ultimate Team", "Football Ultimate Tournament", "FIFA United Teams", "Football Union Team"], respuesta: 0 },
+    { pregunta: "¿Qué jugador tiene la mejor valoración en FIFA 23?", opciones: ["Lionel Messi", "Cristiano Ronaldo", "Kylian Mbappé", "Robert Lewandowski"], respuesta: 0 },
+    { pregunta: "¿Qué año se lanzó el primer FIFA?", opciones: ["1993", "1995", "1997", "2000"], respuesta: 0 }
+  ],
+  medium: [
+    { pregunta: "¿Qué modo de FIFA permite crear tu propio club?", opciones: ["Carrera", "Ultimate Team", "Volta", "Pro Clubs"], respuesta: 0 },
+    { pregunta: "¿Qué jugador aparece en la portada de FIFA 23?", opciones: ["Lionel Messi", "Cristiano Ronaldo", "Kylian Mbappé", "Erling Haaland"], respuesta: 2 },
+    { pregunta: "¿Qué liga no está disponible en FIFA debido a exclusividad con PES?", opciones: ["Serie A", "LaLiga", "Bundesliga", "J-League"], respuesta: 3 },
+    { pregunta: "¿Qué significa SBC en FIFA Ultimate Team?", opciones: ["Squad Building Challenge", "Special Bonus Card", "Super Boost Challenge", "Squad Bonus Challenge"], respuesta: 0 },
+    { pregunta: "¿Qué evento especial ocurre en FIFA durante diciembre?", opciones: ["FUTMAS", "TOTY", "Black Friday", "FUT Birthday"], respuesta: 0 },
+    { pregunta: "¿Qué tipo de carta es la más rara en FIFA Ultimate Team?", opciones: ["Oro", "TOTY", "IF", "Icono"], respuesta: 3 },
+    { pregunta: "¿Qué botón se usa para hacer un pase filtrado en configuración clásica?", opciones: ["Triángulo", "Círculo", "Cuadrado", "X"], respuesta: 0 }
+  ],
+  hard: [
+    { pregunta: "¿Qué jugador tiene la carta Icono Prime más cara en FIFA 23?", opciones: ["Pelé", "Maradona", "Zidane", "Ronaldo Nazário"], respuesta: 3 },
+    { pregunta: "¿Qué edición de FIFA introdujo el modo Ultimate Team?", opciones: ["FIFA 09", "FIFA 10", "FIFA 11", "FIFA 12"], respuesta: 0 },
+    { pregunta: "¿Qué equipo tiene más títulos en el modo Carrera de FIFA?", opciones: ["Real Madrid", "Manchester United", "Barcelona", "Bayern Múnich"], respuesta: 0 },
+    { pregunta: "¿Qué jugador tiene la mejor carta TOTY en FIFA 23?", opciones: ["Lionel Messi", "Kylian Mbappé", "Karim Benzema", "Kevin De Bruyne"], respuesta: 1 },
+    { pregunta: "¿Qué significa 'chemistry' en FIFA Ultimate Team?", opciones: ["Química entre jugadores", "Compatibilidad de cartas", "Sinergia de equipo", "Relación de habilidades"], respuesta: 0 },
+    { pregunta: "¿Qué botón se usa para hacer un regate avanzado en configuración clásica?", opciones: ["R1", "L1", "R2", "L2"], respuesta: 1 },
+    { pregunta: "¿Qué país tiene más estadios licenciados en FIFA 23?", opciones: ["Inglaterra", "España", "Alemania", "Italia"], respuesta: 0 }
+  ]
+};
+
+const cristianoRonaldo = {
+  easy: [
+    { pregunta: "¿En qué país nació Cristiano Ronaldo?", opciones: ["España", "Portugal", "Brasil", "Argentina"], respuesta: 1 },
+    { pregunta: "¿Qué número de camiseta es más icónico para Cristiano Ronaldo?", opciones: ["7", "10", "9", "11"], respuesta: 0 },
+    { pregunta: "¿Qué equipo fichó a Cristiano Ronaldo desde el Sporting de Lisboa?", opciones: ["Real Madrid", "Manchester United", "Juventus", "PSG"], respuesta: 1 },
+    { pregunta: "¿Cuántos Balones de Oro ha ganado Cristiano Ronaldo (hasta 2024)?", opciones: ["4", "5", "6", "7"], respuesta: 1 },
+    { pregunta: "¿Qué apodo tiene Cristiano Ronaldo?", opciones: ["CR7", "El Bicho", "El Comandante", "Todos los anteriores"], respuesta: 3 },
+    { pregunta: "¿En qué año ganó Cristiano Ronaldo su primera Champions League?", opciones: ["2008", "2014", "2016", "2018"], respuesta: 0 },
+    { pregunta: "¿Qué selección nacional representa Cristiano Ronaldo?", opciones: ["España", "Portugal", "Brasil", "Italia"], respuesta: 1 }
+  ],
+  medium: [
+    { pregunta: "¿Cuántos goles marcó Cristiano Ronaldo en su primera temporada con el Real Madrid?", opciones: ["26", "33", "40", "50"], respuesta: 2 },
+    { pregunta: "¿Qué entrenador dirigió a Cristiano Ronaldo en el Manchester United?", opciones: ["Alex Ferguson", "José Mourinho", "Pep Guardiola", "Carlo Ancelotti"], respuesta: 0 },
+    { pregunta: "¿Qué récord rompió Cristiano Ronaldo en la Eurocopa 2020?", opciones: ["Máximo goleador histórico", "Más asistencias", "Más partidos jugados", "Más goles en un torneo"], respuesta: 0 },
+    { pregunta: "¿Qué equipo venció el Real Madrid en la final de la Champions League 2014?", opciones: ["Atlético de Madrid", "Juventus", "Liverpool", "Bayern Múnich"], respuesta: 0 },
+    { pregunta: "¿Qué marca deportiva patrocina a Cristiano Ronaldo?", opciones: ["Adidas", "Nike", "Puma", "Under Armour"], respuesta: 1 },
+    { pregunta: "¿En qué año debutó Cristiano Ronaldo con la selección de Portugal?", opciones: ["2002", "2003", "2004", "2005"], respuesta: 1 },
+    { pregunta: "¿Qué trofeo ganó Cristiano Ronaldo con Portugal en 2016?", opciones: ["Eurocopa", "Liga de Naciones", "Copa del Mundo", "Confederaciones"], respuesta: 0 }
+  ],
+  hard: [
+    { pregunta: "¿Cuántos goles ha marcado Cristiano Ronaldo en su carrera profesional (hasta 2024)?", opciones: ["Más de 700", "Más de 800", "Más de 900", "Más de 1000"], respuesta: 1 },
+    { pregunta: "¿Qué equipo venció al Manchester United en la final de la FA Cup 2005?", opciones: ["Arsenal", "Chelsea", "Liverpool", "Manchester City"], respuesta: 0 },
+    { pregunta: "¿Cuántos hat-tricks ha marcado Cristiano Ronaldo en su carrera profesional (hasta 2024)?", opciones: ["Más de 50", "Más de 60", "Más de 70", "Más de 80"], respuesta: 2 },
+    { pregunta: "¿Qué récord rompió Cristiano Ronaldo en la Champions League 2013/14?", opciones: ["Más goles en una temporada", "Más asistencias", "Más goles en fase de grupos", "Más goles en finales"], respuesta: 0 },
+    { pregunta: "¿Cuantos goles hizo en Champions League en la 2007/2008?", opciones: ["5", "10", "8", "12"], respuesta: 2 },
+    { pregunta: "¿A qué equipo le hizo mas hat-tricks?", opciones: ["FC Barcelona", "Atlético de Madrid", "Sevilla", "Levante"], respuesta: 2 },
+    { pregunta: "¿Qué trofeo ganó Cristiano Ronaldo con el Al-Nassr en 2023?", opciones: ["Liga Saudí", "Supercopa Saudí", "Copa del Rey Saudí", "Arab Club Champions Cup"], respuesta: 3 }
+  ]
+};
+
+Object.assign(preguntas, { fifaConsola, cristianoRonaldo });
