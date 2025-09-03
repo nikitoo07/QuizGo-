@@ -778,7 +778,7 @@ const cristianoRonaldo = {
     { pregunta: "¿Qué selección nacional representa Cristiano Ronaldo?", opciones: ["España", "Portugal", "Brasil", "Italia"], respuesta: 1 }
   ],
   medium: [
-    { pregunta: "¿Cuántos goles marcó Cristiano Ronaldo en su primera temporada con el Real Madrid?", opciones: ["26", "33", "40", "50"], respuesta: 2 },
+    { pregunta: "¿Cuántos goles marcó Cristiano Ronaldo en su primera temporada con el Real Madrid?", opciones: ["26", "33", "40", "31"], respuesta: 1 },
     { pregunta: "¿Qué entrenador dirigió a Cristiano Ronaldo en el Manchester United?", opciones: ["Alex Ferguson", "José Mourinho", "Pep Guardiola", "Carlo Ancelotti"], respuesta: 0 },
     { pregunta: "¿Qué récord rompió Cristiano Ronaldo en la Eurocopa 2020?", opciones: ["Máximo goleador histórico", "Más asistencias", "Más partidos jugados", "Más goles en un torneo"], respuesta: 0 },
     { pregunta: "¿Qué equipo venció el Real Madrid en la final de la Champions League 2014?", opciones: ["Atlético de Madrid", "Juventus", "Liverpool", "Bayern Múnich"], respuesta: 0 },
