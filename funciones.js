@@ -737,33 +737,33 @@ const boxeo = {
 Object.assign(preguntas, {
   boxeo
 });
-const fifaConsola = {
+const eaSportsFC25 = {
   easy: [
-    { pregunta: "¿Qué empresa desarrolla el videojuego FIFA?", opciones: ["Konami", "EA Sports", "Ubisoft", "Activision"], respuesta: 1 },
-    { pregunta: "¿Qué modo de juego es el más popular en FIFA?", opciones: ["Carrera", "Ultimate Team", "Volta", "Amistoso"], respuesta: 1 },
-    { pregunta: "¿Qué botón se usa para disparar en la configuración clásica de FIFA?", opciones: ["X", "Círculo", "Cuadrado", "Triángulo"], respuesta: 1 },
-    { pregunta: "¿Qué equipo tiene la mejor valoración en FIFA 23?", opciones: ["Real Madrid", "Manchester City", "PSG", "Bayern Múnich"], respuesta: 2 },
-    { pregunta: "¿Qué significa FUT en FIFA?", opciones: ["FIFA Ultimate Team", "Football Ultimate Tournament", "FIFA United Teams", "Football Union Team"], respuesta: 0 },
-    { pregunta: "¿Qué jugador tiene la mejor valoración en FIFA 23?", opciones: ["Lionel Messi", "Cristiano Ronaldo", "Kylian Mbappé", "Robert Lewandowski"], respuesta: 0 },
-    { pregunta: "¿Qué año se lanzó el primer FIFA?", opciones: ["1993", "1995", "1997", "2000"], respuesta: 0 }
+    { pregunta: "¿Qué empresa desarrolla EA Sports FC 25?", opciones: ["Konami", "EA Sports", "Ubisoft", "Activision"], respuesta: 1 },
+    { pregunta: "¿Qué modo de juego es el más popular en EA Sports FC 25?", opciones: ["Carrera", "Ultimate Team", "Volta", "Amistoso"], respuesta: 1 },
+    { pregunta: "¿Qué botón se usa para disparar en la configuración clásica de EA Sports FC 25?", opciones: ["X", "Círculo", "Cuadrado", "Triángulo"], respuesta: 1 },
+    { pregunta: "¿Qué equipo tiene la mejor valoración en EA Sports FC 25?", opciones: ["Real Madrid", "Manchester City", "PSG", "Bayern Múnich"], respuesta: 1 },
+    { pregunta: "¿Qué significa FUT en EA Sports FC 25?", opciones: ["Football Ultimate Team", "Football United Tournament", "Football Union Team", "Football Ultimate Tournament"], respuesta: 0 },
+    { pregunta: "¿Qué jugador tiene la mejor valoración en EA Sports FC 25?", opciones: ["Lionel Messi", "Erling Haaland", "Kylian Mbappé", "Kevin De Bruyne"], respuesta: 2 },
+    { pregunta: "¿Qué año se lanzó EA Sports FC como sucesor de FIFA?", opciones: ["2023", "2024", "2025", "2026"], respuesta: 1 }
   ],
   medium: [
-    { pregunta: "¿Qué modo de FIFA permite crear tu propio club?", opciones: ["Carrera", "Ultimate Team", "Volta", "Pro Clubs"], respuesta: 0 },
-    { pregunta: "¿Qué jugador aparece en la portada de FIFA 23?", opciones: ["Lionel Messi", "Cristiano Ronaldo", "Kylian Mbappé", "Erling Haaland"], respuesta: 2 },
-    { pregunta: "¿Qué liga no está disponible en FIFA debido a exclusividad con PES?", opciones: ["Serie A", "LaLiga", "Bundesliga", "J-League"], respuesta: 3 },
-    { pregunta: "¿Qué significa SBC en FIFA Ultimate Team?", opciones: ["Squad Building Challenge", "Special Bonus Card", "Super Boost Challenge", "Squad Bonus Challenge"], respuesta: 0 },
-    { pregunta: "¿Qué evento especial ocurre en FIFA durante diciembre?", opciones: ["FUTMAS", "TOTY", "Black Friday", "FUT Birthday"], respuesta: 0 },
-    { pregunta: "¿Qué tipo de carta es la más rara en FIFA Ultimate Team?", opciones: ["Oro", "TOTY", "IF", "Icono"], respuesta: 3 },
+    { pregunta: "¿Qué modo de EA Sports FC 25 permite crear tu propio club?", opciones: ["Carrera", "Ultimate Team", "Volta", "Pro Clubs"], respuesta: 0 },
+    { pregunta: "¿Qué jugador aparece en la portada de EA Sports FC 25?", opciones: ["Lionel Messi", "Erling Haaland", "Kylian Mbappé", "Jude Bellingham"], respuesta: 1 },
+    { pregunta: "¿Qué liga no está disponible en EA Sports FC 25 debido a exclusividad con otro juego?", opciones: ["Serie A", "LaLiga", "Bundesliga", "J-League"], respuesta: 3 },
+    { pregunta: "¿Qué significa SBC en EA Sports FC Ultimate Team?", opciones: ["Squad Building Challenge", "Special Bonus Card", "Super Boost Challenge", "Squad Bonus Challenge"], respuesta: 0 },
+    { pregunta: "¿Qué evento especial ocurre en EA Sports FC durante diciembre?", opciones: ["FUTMAS", "TOTY", "Black Friday", "FUT Birthday"], respuesta: 0 },
+    { pregunta: "¿Qué tipo de carta es la más rara en EA Sports FC Ultimate Team?", opciones: ["Oro", "TOTY", "IF", "Icono"], respuesta: 3 },
     { pregunta: "¿Qué botón se usa para hacer un pase filtrado en configuración clásica?", opciones: ["Triángulo", "Círculo", "Cuadrado", "X"], respuesta: 0 }
   ],
   hard: [
-    { pregunta: "¿Qué jugador tiene la carta Icono Prime más cara en FIFA 23?", opciones: ["Pelé", "Maradona", "Zidane", "Ronaldo Nazário"], respuesta: 3 },
-    { pregunta: "¿Qué edición de FIFA introdujo el modo Ultimate Team?", opciones: ["FIFA 09", "FIFA 10", "FIFA 11", "FIFA 12"], respuesta: 0 },
-    { pregunta: "¿Qué equipo tiene más títulos en el modo Carrera de FIFA?", opciones: ["Real Madrid", "Manchester United", "Barcelona", "Bayern Múnich"], respuesta: 0 },
-    { pregunta: "¿Qué jugador tiene la mejor carta TOTY en FIFA 23?", opciones: ["Lionel Messi", "Kylian Mbappé", "Karim Benzema", "Kevin De Bruyne"], respuesta: 1 },
-    { pregunta: "¿Qué significa 'chemistry' en FIFA Ultimate Team?", opciones: ["Química entre jugadores", "Compatibilidad de cartas", "Sinergia de equipo", "Relación de habilidades"], respuesta: 0 },
+    { pregunta: "¿Qué jugador tiene la carta Icono Prime más cara en EA Sports FC 25?", opciones: ["Pelé", "Maradona", "Zidane", "Ronaldo Nazário"], respuesta: 3 },
+    { pregunta: "¿Qué edición de EA Sports FC introdujo el modo Ultimate Team?", opciones: ["EA Sports FC 24", "EA Sports FC 25", "EA Sports FC 26", "EA Sports FC 27"], respuesta: 0 },
+    { pregunta: "¿Qué equipo tiene más títulos en el modo Carrera de EA Sports FC 25?", opciones: ["Real Madrid", "Manchester United", "Barcelona", "Bayern Múnich"], respuesta: 0 },
+    { pregunta: "¿Qué jugador tiene la mejor carta TOTY en EA Sports FC 25?", opciones: ["Lionel Messi", "Kylian Mbappé", "Karim Benzema", "Kevin De Bruyne"], respuesta: 1 },
+    { pregunta: "¿Qué significa 'chemistry' en EA Sports FC Ultimate Team?", opciones: ["Química entre jugadores", "Compatibilidad de cartas", "Sinergia de equipo", "Relación de habilidades"], respuesta: 0 },
     { pregunta: "¿Qué botón se usa para hacer un regate avanzado en configuración clásica?", opciones: ["R1", "L1", "R2", "L2"], respuesta: 1 },
-    { pregunta: "¿Qué país tiene más estadios licenciados en FIFA 23?", opciones: ["Inglaterra", "España", "Alemania", "Italia"], respuesta: 0 }
+    { pregunta: "¿Qué país tiene más estadios licenciados en EA Sports FC 25?", opciones: ["Inglaterra", "España", "Alemania", "Italia"], respuesta: 0 }
   ]
 };
 
@@ -796,5 +796,160 @@ const cristianoRonaldo = {
     { pregunta: "¿Qué trofeo ganó Cristiano Ronaldo con el Al-Nassr en 2023?", opciones: ["Liga Saudí", "Supercopa Saudí", "Copa del Rey Saudí", "Arab Club Champions Cup"], respuesta: 3 }
   ]
 };
+const rap = {
+  easy: [
+    { pregunta: "¿En qué país nació el rap?", opciones: ["Estados Unidos", "Jamaica", "Francia", "España"], respuesta: 0 },
+    { pregunta: "¿Qué ciudad es considerada la cuna del rap?", opciones: ["Los Ángeles", "Nueva York", "Chicago", "Atlanta"], respuesta: 1 },
+    { pregunta: "¿Qué significa 'MC' en el rap?", opciones: ["Master of Ceremony", "Music Creator", "Microphone Controller", "Mega Cool"], respuesta: 0 },
+    { pregunta: "¿Qué elemento NO pertenece a la cultura hip hop?", opciones: ["Graffiti", "Breakdance", "Boxeo", "DJing"], respuesta: 2 },
+    { pregunta: "¿Quién es conocido como el 'Rey del Hip Hop' en los inicios?", opciones: ["Run DMC", "Grandmaster Flash", "Tupac", "Jay-Z"], respuesta: 1 },
+    { pregunta: "¿Qué instrumento se usaba al inicio para crear beats en rap?", opciones: ["Tornamesa", "Guitarra", "Piano", "Batería"], respuesta: 0 },
+    { pregunta: "¿Qué estilo de rap nació en la Costa Oeste?", opciones: ["Trap", "Boom Bap", "G-Funk", "Drill"], respuesta: 2 }
+  ],
+  medium: [
+    { pregunta: "¿Qué rapero popularizó la frase 'Thug Life'?", opciones: ["The Notorious B.I.G.", "Eminem", "Tupac", "Snoop Dogg"], respuesta: 2 },
+    { pregunta: "¿Qué significa 'freestyle' en el rap?", opciones: ["Cantar con pista", "Improvisar letras", "Hacer un remix", "Escribir en libreta"], respuesta: 1 },
+    { pregunta: "¿Qué rapero es apodado Slim Shady?", opciones: ["Eminem", "Dr. Dre", "Nas", "50 Cent"], respuesta: 0 },
+    { pregunta: "¿En qué década se popularizó el rap en todo el mundo?", opciones: ["70s", "80s", "90s", "2000s"], respuesta: 2 },
+    { pregunta: "¿Qué rapero ganó un Oscar por 'Lose Yourself'?", opciones: ["Kanye West", "Jay-Z", "Eminem", "Drake"], respuesta: 2 },
+    { pregunta: "¿Qué significa 'flow' en el rap?", opciones: ["Forma de vestir", "Ritmo y cadencia al rapear", "Técnica de baile", "Nombre de un beat"], respuesta: 1 },
+    { pregunta: "¿Qué productor trabajó con N.W.A. y es pionero en el rap?", opciones: ["DJ Khaled", "Dr. Dre", "Metro Boomin", "Rick Rubin"], respuesta: 1 }
+  ],
+  hard: [
+    { pregunta: "¿En qué año fue asesinado Tupac Shakur?", opciones: ["1994", "1996", "1998", "2000"], respuesta: 1 },
+    { pregunta: "¿Cuál fue el primer álbum de Nas?", opciones: ["It Was Written", "Illmatic", "Stillmatic", "God's Son"], respuesta: 1 },
+    { pregunta: "¿Qué batalla marcó la historia del rap entre la Costa Este y Oeste?", opciones: ["Jay-Z vs Nas", "Tupac vs Biggie", "Drake vs Meek Mill", "Eminem vs Machine Gun Kelly"], respuesta: 1 },
+    { pregunta: "¿Qué rapero lanzó el álbum 'The Chronic'?", opciones: ["Snoop Dogg", "Dr. Dre", "Ice Cube", "Kendrick Lamar"], respuesta: 1 },
+    { pregunta: "¿Qué estilo de rap se originó en Atlanta?", opciones: ["Trap", "Drill", "Boom Bap", "Crunk"], respuesta: 0 },
+    { pregunta: "¿Qué rapero es conocido como 'Hova'?", opciones: ["Nas", "Jay-Z", "Kanye West", "Lil Wayne"], respuesta: 1 },
+    { pregunta: "¿Qué rapera fue la primera en ganar un Grammy a Mejor Álbum de Rap?", opciones: ["Missy Elliott", "Cardi B", "Nicki Minaj", "Lauryn Hill"], respuesta: 3 }
+  ]
+};
+const graffiti = {
+  easy: [
+    { pregunta: "¿Qué es el graffiti?", opciones: ["Un tipo de pintura artística en muros", "Un deporte", "Un baile urbano", "Una técnica de impresión"], respuesta: 0 },
+    { pregunta: "¿Con qué herramienta se realiza principalmente el graffiti?", opciones: ["Brocha", "Spray", "Pincel", "Tinta"], respuesta: 1 },
+    { pregunta: "¿En qué superficie es más común ver graffiti?", opciones: ["Lienzo", "Muros", "Papel", "Vidrio"], respuesta: 1 },
+    { pregunta: "¿Qué significa 'tag' en graffiti?", opciones: ["Firma del artista", "Pintar un mural", "Hacer un boceto", "Nombre del color"], respuesta: 0 },
+    { pregunta: "¿Cuál es el color básico más usado en graffiti?", opciones: ["Negro", "Rojo", "Azul", "Verde"], respuesta: 0 },
+    { pregunta: "¿Qué estilo de letra es más común en graffiti?", opciones: ["Bubble", "Cursiva", "Tipografía Times", "Arial"], respuesta: 0 },
+    { pregunta: "¿Qué elemento urbano es típico para hacer graffiti?", opciones: ["Puertas", "Paredes", "Autos", "Puentes"], respuesta: 1 }
+  ],
+  medium: [
+    { pregunta: "¿En qué década se popularizó el graffiti como cultura urbana?", opciones: ["1960s", "1970s", "1980s", "1990s"], respuesta: 1 },
+    { pregunta: "¿Qué ciudad es considerada la cuna del graffiti moderno?", opciones: ["Los Ángeles", "Nueva York", "París", "Tokio"], respuesta: 1 },
+    { pregunta: "¿Qué significa 'throw-up' en graffiti?", opciones: ["Un mural detallado", "Un graffiti rápido con relleno simple", "Una firma pequeña", "Un boceto en papel"], respuesta: 1 },
+    { pregunta: "¿Qué artista es considerado pionero del graffiti en Nueva York?", opciones: ["Banksy", "Taki 183", "Seen", "Cope2"], respuesta: 1 },
+    { pregunta: "¿Qué estilo se caracteriza por letras grandes y rellenas?", opciones: ["Tag", "Wildstyle", "Throw-up", "Stencil"], respuesta: 2 },
+    { pregunta: "¿Qué herramienta se usa para dar brillo y efectos en graffiti?", opciones: ["Marcadores", "Pinceles", "Spray con boquillas especiales", "Tizas"], respuesta: 2 },
+    { pregunta: "¿Qué significa 'crew' en graffiti?", opciones: ["Un tipo de letra", "Un grupo de graffiteros", "Una técnica de color", "Un diseño abstracto"], respuesta: 1 }
+  ],
+  hard: [
+    { pregunta: "¿Qué estilo de graffiti se caracteriza por letras complejas e ilegibles?", opciones: ["Throw-up", "Wildstyle", "Bubble", "Stencil"], respuesta: 1 },
+    { pregunta: "¿Qué artista británico es famoso por sus graffitis con mensajes políticos?", opciones: ["Banksy", "Daim", "Shepard Fairey", "Retna"], respuesta: 0 },
+    { pregunta: "¿Qué técnica consiste en usar plantillas para pintar graffiti?", opciones: ["Tag", "Throw-up", "Stencil", "Wildstyle"], respuesta: 2 },
+    { pregunta: "¿Cómo se llama la competencia internacional más famosa de graffiti?", opciones: ["Red Bull BC One", "Write4Gold", "Battle of the Year", "Art Basel"], respuesta: 1 },
+    { pregunta: "¿Qué país europeo tuvo un gran auge del graffiti en los 80s junto con EE.UU.?", opciones: ["Francia", "Alemania", "Italia", "España"], respuesta: 1 },
+    { pregunta: "¿Qué tipo de boquilla se usa para líneas muy finas en graffiti?", opciones: ["Fat Cap", "Skinny Cap", "Soft Cap", "Hard Cap"], respuesta: 1 },
+    { pregunta: "¿Cómo se llama el libro considerado la 'biblia' del graffiti publicado en 1984?", opciones: ["Style Wars", "Subway Art", "Graffiti Kings", "Street Art"], respuesta: 1 }
+  ]
+};
 
-Object.assign(preguntas, { fifaConsola, cristianoRonaldo });
+Object.assign(preguntas, { graffiti });
+
+Object.assign(preguntas, { rap });
+
+
+Object.assign(preguntas, { eaSportsFC25, cristianoRonaldo });
+const marvel = {
+  easy: [
+    { pregunta: "¿Quién es el líder de los Avengers?", opciones: ["Iron Man", "Capitán América", "Thor", "Hulk"], respuesta: 1 },
+    { pregunta: "¿Qué piedra del infinito controla el tiempo?", opciones: ["Piedra del Alma", "Piedra del Tiempo", "Piedra del Poder", "Piedra de la Realidad"], respuesta: 1 },
+    { pregunta: "¿Cómo se llama el martillo de Thor?", opciones: ["Stormbreaker", "Mjolnir", "Gungnir", "Jarnbjorn"], respuesta: 1 },
+    { pregunta: "¿Qué superhéroe es conocido como el 'Hombre Araña'?", opciones: ["Tony Stark", "Peter Parker", "Bruce Banner", "Steve Rogers"], respuesta: 1 },
+    { pregunta: "¿Quién es el villano principal en 'Avengers: Infinity War'?", opciones: ["Ultron", "Thanos", "Loki", "Hela"], respuesta: 1 },
+    { pregunta: "¿Qué metal compone el escudo del Capitán América?", opciones: ["Vibranium", "Adamantium", "Acero", "Titanio"], respuesta: 0 },
+    { pregunta: "¿Qué personaje dice 'Yo soy Groot'?", opciones: ["Rocket", "Groot", "Drax", "Gamora"], respuesta: 1 }
+  ],
+  medium: [
+    { pregunta: "¿Quién creó a Ultron?", opciones: ["Bruce Banner", "Tony Stark", "Hank Pym", "Nick Fury"], respuesta: 1 },
+    { pregunta: "¿Qué planeta es el hogar de Thanos?", opciones: ["Asgard", "Titan", "Xandar", "Sakaar"], respuesta: 1 },
+    { pregunta: "¿Cómo se llama la hermana de Black Panther?", opciones: ["Okoye", "Nakia", "Shuri", "Ramonda"], respuesta: 2 },
+    { pregunta: "¿Qué personaje es conocido como el 'Hechicero Supremo'?", opciones: ["Doctor Strange", "Wong", "Anciana", "Loki"], respuesta: 0 },
+    { pregunta: "¿Qué organización malvada aparece en 'Capitán América: El Soldado de Invierno'?", opciones: ["Hydra", "AIM", "SHIELD", "Los Skrulls"], respuesta: 0 },
+    { pregunta: "¿Qué actor interpreta a Iron Man en el UCM?", opciones: ["Chris Evans", "Robert Downey Jr.", "Chris Hemsworth", "Mark Ruffalo"], respuesta: 1 },
+    { pregunta: "¿Qué película del UCM fue la primera en estrenarse?", opciones: ["Iron Man", "Thor", "Capitán América: El Primer Vengador", "Hulk"], respuesta: 0 }
+  ],
+  hard: [
+    { pregunta: "¿Qué personaje es el primer vengador en los cómics?", opciones: ["Iron Man", "Thor", "Hulk", "Ant-Man"], respuesta: 3 },
+    { pregunta: "¿Qué actor interpreta a Loki en el UCM?", opciones: ["Tom Hiddleston", "Chris Hemsworth", "Mark Ruffalo", "Jeremy Renner"], respuesta: 0 },
+    { pregunta: "¿Qué villano aparece en 'Spider-Man: Homecoming'?", opciones: ["Mysterio", "El Buitre", "Duende Verde", "Doctor Octopus"], respuesta: 1 },
+    { pregunta: "¿Qué personaje es conocido como 'El Soldado de Invierno'?", opciones: ["Sam Wilson", "Bucky Barnes", "Steve Rogers", "Clint Barton"], respuesta: 1 },
+    { pregunta: "¿Qué película del UCM recaudó más dinero en taquilla?", opciones: ["Avengers: Endgame", "Avengers: Infinity War", "Spider-Man: No Way Home", "Black Panther"], respuesta: 0 },
+    { pregunta: "¿Qué personaje es el padre de Star-Lord?", opciones: ["Ego", "Yondu", "Thanos", "Odin"], respuesta: 0 },
+    { pregunta: "¿Qué director dirigió 'Guardianes de la Galaxia'?", opciones: ["James Gunn", "Joss Whedon", "Jon Favreau", "Taika Waititi"], respuesta: 0 }
+  ]
+};
+
+const brawlStars = {
+  easy: [
+    { pregunta: "¿Cuántos jugadores hay en un equipo en Brawl Stars?", opciones: ["2", "3", "4", "5"], respuesta: 1 },
+    { pregunta: "¿Qué tipo de juego es Brawl Stars?", opciones: ["MOBA", "Battle Royale", "Shooter", "Estrategia"], respuesta: 0 },
+    { pregunta: "¿Qué brawler tiene un oso como habilidad especial?", opciones: ["Shelly", "Nita", "Colt", "Jessie"], respuesta: 1 },
+    { pregunta: "¿Qué moneda se usa para mejorar a los brawlers?", opciones: ["Gemas", "Monedas", "Fichas", "Estrellas"], respuesta: 1 },
+    { pregunta: "¿Qué brawler dispara con una escopeta?", opciones: ["Shelly", "Bull", "Darryl", "Todos los anteriores"], respuesta: 3 },
+    { pregunta: "¿Qué brawler tiene una torreta como habilidad especial?", opciones: ["Jessie", "Penny", "Pam", "8-Bit"], respuesta: 0 },
+    { pregunta: "¿Qué modo de juego consiste en recoger gemas?", opciones: ["Atrapagemas", "Supervivencia", "Balón Brawl", "Caza Estelar"], respuesta: 0 }
+  ],
+  medium: [
+    { pregunta: "¿Qué brawler es un robot que dispara rayos láser?", opciones: ["8-Bit", "Rico", "Barley", "Carl"], respuesta: 1 },
+    { pregunta: "¿Qué brawler tiene una habilidad especial llamada 'Supervivencia'?", opciones: ["Leon", "Crow", "Edgar", "Mortis"], respuesta: 0 },
+    { pregunta: "¿Qué brawler lanza botellas explosivas?", opciones: ["Barley", "Dynamike", "Tick", "Sprout"], respuesta: 0 },
+    { pregunta: "¿Qué brawler tiene una habilidad que cura a sus aliados?", opciones: ["Pam", "Poco", "Byron", "Todos los anteriores"], respuesta: 3 },
+    { pregunta: "¿Qué brawler tiene un ataque que rebota en las paredes?", opciones: ["Rico", "Spike", "Brock", "Colt"], respuesta: 0 },
+    { pregunta: "¿Qué brawler es conocido por su velocidad y ataques cuerpo a cuerpo?", opciones: ["Edgar", "Mortis", "Leon", "Crow"], respuesta: 1 },
+    { pregunta: "¿Qué brawler tiene un ataque que ralentiza a los enemigos?", opciones: ["Spike", "Crow", "Sandy", "Amber"], respuesta: 1 }
+  ],
+  hard: [
+    { pregunta: "¿Qué brawler tiene una habilidad estelar llamada 'Curación Máxima'?", opciones: ["Pam", "Poco", "Byron", "Sprout"], respuesta: 1 },
+    { pregunta: "¿Qué brawler fue el primero en tener una habilidad de invisibilidad?", opciones: ["Leon", "Sandy", "Crow", "Edgar"], respuesta: 0 },
+    { pregunta: "¿Qué brawler tiene un ataque que explota en forma de cruz?", opciones: ["Spike", "Dynamike", "Tick", "Sprout"], respuesta: 0 },
+    { pregunta: "¿Qué brawler tiene una habilidad que invoca un torbellino?", opciones: ["Gale", "Sandy", "Amber", "Stu"], respuesta: 1 },
+    { pregunta: "¿Qué brawler tiene una habilidad estelar que aumenta su velocidad al recoger gemas?", opciones: ["Max", "8-Bit", "Leon", "Carl"], respuesta: 1 },
+    { pregunta: "¿Qué brawler tiene un ataque que se divide en múltiples proyectiles al impactar?", opciones: ["Spike", "Piper", "Brock", "Amber"], respuesta: 0 },
+    { pregunta: "¿Qué brawler tiene una habilidad que invoca un oso?", opciones: ["Nita", "Jessie", "Penny", "Darryl"], respuesta: 0 }
+  ]
+};
+
+Object.assign(preguntas, { marvel, brawlStars });
+const jujutsuKaisen = {
+  easy: [
+    { pregunta: "¿Quién es el protagonista de Jujutsu Kaisen?", opciones: ["Yuji Itadori", "Megumi Fushiguro", "Satoru Gojo", "Nobara Kugisaki"], respuesta: 0 },
+    { pregunta: "¿Qué objeto maldito se traga Yuji Itadori?", opciones: ["Un dedo", "Un ojo", "Un corazón", "Un talismán"], respuesta: 0 },
+    { pregunta: "¿Quién es conocido como el hechicero más fuerte?", opciones: ["Satoru Gojo", "Suguru Geto", "Kento Nanami", "Yuta Okkotsu"], respuesta: 0 },
+    { pregunta: "¿Qué escuela de hechicería asiste Yuji?", opciones: ["Escuela Técnica de Jujutsu de Tokio", "Escuela de Hechicería de Kioto", "Academia de Magia de Osaka", "Escuela de Exorcismo de Nagoya"], respuesta: 0 },
+    { pregunta: "¿Qué técnica maldita utiliza Nobara Kugisaki?", opciones: ["Martillo y clavos", "Sombras", "Manipulación de sangre", "Control de fuego"], respuesta: 0 },
+    { pregunta: "¿Qué es Sukuna?", opciones: ["Un espíritu maldito", "Un hechicero", "Un dios", "Un demonio"], respuesta: 0 },
+    { pregunta: "¿Qué arma usa Megumi Fushiguro?", opciones: ["Sombras", "Espadas", "Lanzas", "Arcos"], respuesta: 0 }
+  ],
+  medium: [
+    { pregunta: "¿Qué técnica maldita utiliza Satoru Gojo?", opciones: ["Límite Infinito", "Manipulación de Sangre", "Control de Sombras", "Dominio de Fuego"], respuesta: 0 },
+    { pregunta: "¿Quién es el principal antagonista en la primera temporada?", opciones: ["Mahito", "Suguru Geto", "Sukuna", "Hanami"], respuesta: 0 },
+    { pregunta: "¿Qué es un 'Dominio Expandido'?", opciones: ["Una técnica avanzada de maldición", "Un lugar donde se entrenan hechiceros", "Un arma especial", "Un tipo de espíritu"], respuesta: 0 },
+    { pregunta: "¿Qué relación tiene Yuta Okkotsu con Rika?", opciones: ["Es su prometida maldita", "Es su hermana", "Es su maestra", "Es su amiga"], respuesta: 0 },
+    { pregunta: "¿Qué tipo de maldición es Mahito?", opciones: ["Maldición de forma humana", "Maldición de sangre", "Maldición de sombras", "Maldición de fuego"], respuesta: 0 },
+    { pregunta: "¿Qué técnica utiliza Toge Inumaki?", opciones: ["Palabras malditas", "Manipulación de Sombras", "Control de Sangre", "Dominio de Fuego"], respuesta: 0 },
+    { pregunta: "¿Qué es el 'Shikigami' de Megumi?", opciones: ["Criaturas de sombras", "Espíritus de fuego", "Armas malditas", "Talismanes"], respuesta: 0 }
+  ],
+  hard: [
+    { pregunta: "¿Cuántos dedos de Sukuna existen?", opciones: ["10", "15", "20", "25"], respuesta: 2 },
+    { pregunta: "¿Qué técnica utiliza Kento Nanami?", opciones: ["Relación 7:3", "Límite Infinito", "Palabras Malditas", "Manipulación de Sangre"], respuesta: 0 },
+    { pregunta: "¿Quién es el director de la Escuela Técnica de Jujutsu de Tokio?", opciones: ["Masamichi Yaga", "Satoru Gojo", "Suguru Geto", "Kiyotaka Ijichi"], respuesta: 0 },
+    { pregunta: "¿Qué espíritu maldito tiene forma de árbol?", opciones: ["Hanami", "Mahito", "Jogo", "Dagon"], respuesta: 0 },
+    { pregunta: "¿Qué técnica utiliza Choso?", opciones: ["Manipulación de Sangre", "Dominio Expandido", "Palabras Malditas", "Control de Sombras"], respuesta: 0 },
+    { pregunta: "¿Qué es el 'Barco de la Muerte'?", opciones: ["Un ritual maldito", "Un arma especial", "Un espíritu maldito", "Una técnica prohibida"], respuesta: 0 },
+    { pregunta: "¿Qué evento enfrenta la escuela de Tokio contra la escuela de Kioto?", opciones: ["El Intercambio de Estudiantes", "El Torneo de Maldiciones", "La Batalla de Hechiceros", "El Festival de Sombras"], respuesta: 0 }
+  ]
+};
+
+Object.assign(preguntas, { jujutsuKaisen });

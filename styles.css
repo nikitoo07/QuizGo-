@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: background 0.6s ease, color 0.6s ease;    
 }
 
 
@@ -149,6 +150,7 @@ a:hover{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    transition: background 0.6s ease, transform 0.3s ease, box-shadow 0.6s ease;
 }
 #cambiar-tema:hover {
     background: linear-gradient(90deg, #7b2ff2 0%, #f357a8 100%);
@@ -158,6 +160,10 @@ a:hover{
 .tema-oscuro {
     background: linear-gradient(135deg, #232526 0%, #414345 100%);
     color: #f3f3f3;
+    transition: background 0.6s ease, color 0.6s ease; 
+}
+button, input, select, #quiz-container {
+    transition: background 0.6s ease, color 0.6s ease, box-shadow 0.6s ease, border-color 0.6s ease;
 }
 .tema-oscuro form {
     background: #232526;
