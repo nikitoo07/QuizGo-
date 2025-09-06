@@ -658,7 +658,7 @@ const nuevasTematicas = {
       { pregunta: "¿Qué banda es famosa por su mascot 'Eddie' en las portadas?", opciones: ["Iron Maiden","Metallica","Black Sabbath","Judas Priest"], respuesta: 0 },
       { pregunta: "¿Qué subgénero mezcla thrash y speed con técnica instrumental veloz?", opciones: ["Doom metal","Thrash metal","Funk","Ska"], respuesta: 1 },
       { pregunta: "¿Qué festival es famoso por reunir bandas metal en Alemania?", opciones: ["Wacken Open Air","Glastonbury","Coachella","Lollapalooza"], respuesta: 0 },
-      { pregunta: "¿Qué bajista creó líneas rítmicas icónicas en metal (ej: Cliff Burton)?", opciones: ["Cliff Burton","Paul McCartney","John Deacon","Flea"], respuesta: 0 },
+      { pregunta: "¿Qué bajista creó líneas rítmicas icónicas en metal?", opciones: ["Cliff Burton","Paul McCartney","John Deacon","Flea"], respuesta: 0 },
       { pregunta: "¿Qué técnica vocal se usa a menudo en black metal (voz aguda y rasgada)?", opciones: ["Clean","Screaming/ shriek","Opera","Rap"], respuesta: 1 }
     ],
     hard: [
@@ -668,7 +668,7 @@ const nuevasTematicas = {
       { pregunta: "¿Qué banda noruega impulsó la segunda ola del black metal?", opciones: ["Mayhem","AC/DC","The Clash","The Police"], respuesta: 0 },
       { pregunta: "¿Qué sello independiente es conocido por el metal extremo en Noruega?", opciones: ["Peaceville","Nuclear Blast","Century Media","Earache"], respuesta: 0 },
       { pregunta: "¿Qué elemento lírico se encuentra frecuentemente en power metal?", opciones: ["Mitología y fantasía","Noticias políticas","Recetas","Manualidades"], respuesta: 0 },
-      { pregunta: "¿Qué guitarrista es célebre por su técnica en metal y colaboraciones (ej: Yngwie Malmsteen)?", opciones: ["Yngwie Malmsteen","Eric Clapton","Carlos Santana","BB King"], respuesta: 0 }
+      { pregunta: "¿Qué guitarrista es célebre por su técnica en metal y colaboraciones?", opciones: ["Yngwie Malmsteen","Eric Clapton","Carlos Santana","BB King"], respuesta: 0 }
     ]
   }
 };
@@ -902,12 +902,12 @@ const brawlStars = {
     { pregunta: "¿Qué modo de juego consiste en recoger gemas?", opciones: ["Atrapagemas", "Supervivencia", "Balón Brawl", "Caza Estelar"], respuesta: 0 }
   ],
   medium: [
-    { pregunta: "¿Qué brawler es un robot que dispara rayos láser?", opciones: ["8-Bit", "Rico", "Barley", "Carl"], respuesta: 1 },
+    { pregunta: "¿Qué brawler es un robot que dispara rayos láser?", opciones: ["8-Bit", "Rico", "Barley", "Carl"], respuesta: 0 },
     { pregunta: "¿Qué brawler tiene una habilidad especial llamada 'Supervivencia'?", opciones: ["Leon", "Crow", "Edgar", "Mortis"], respuesta: 0 },
     { pregunta: "¿Qué brawler lanza botellas explosivas?", opciones: ["Barley", "Dynamike", "Tick", "Sprout"], respuesta: 0 },
     { pregunta: "¿Qué brawler tiene una habilidad que cura a sus aliados?", opciones: ["Pam", "Poco", "Byron", "Todos los anteriores"], respuesta: 3 },
     { pregunta: "¿Qué brawler tiene un ataque que rebota en las paredes?", opciones: ["Rico", "Spike", "Brock", "Colt"], respuesta: 0 },
-    { pregunta: "¿Qué brawler es conocido por su velocidad y ataques cuerpo a cuerpo?", opciones: ["Edgar", "Mortis", "Leon", "Crow"], respuesta: 1 },
+    { pregunta: "¿Qué brawler es conocido por su velocidad y ataques cuerpo a cuerpo?", opciones: ["Edgar", "Mortis", "Leon", "Crow"], respuesta: 0 },
     { pregunta: "¿Qué brawler tiene un ataque que ralentiza a los enemigos?", opciones: ["Spike", "Crow", "Sandy", "Amber"], respuesta: 1 }
   ],
   hard: [
@@ -915,41 +915,71 @@ const brawlStars = {
     { pregunta: "¿Qué brawler fue el primero en tener una habilidad de invisibilidad?", opciones: ["Leon", "Sandy", "Crow", "Edgar"], respuesta: 0 },
     { pregunta: "¿Qué brawler tiene un ataque que explota en forma de cruz?", opciones: ["Spike", "Dynamike", "Tick", "Sprout"], respuesta: 0 },
     { pregunta: "¿Qué brawler tiene una habilidad que invoca un torbellino?", opciones: ["Gale", "Sandy", "Amber", "Stu"], respuesta: 1 },
-    { pregunta: "¿Qué brawler tiene una habilidad estelar que aumenta su velocidad al recoger gemas?", opciones: ["Max", "8-Bit", "Leon", "Carl"], respuesta: 1 },
+    { pregunta: "¿Qué brawler aumenta su velocidad a él y a sus aliados al activar su ulti?", opciones: ["Max", "8-Bit", "Leon", "Carl"], respuesta: 0 },
     { pregunta: "¿Qué brawler tiene un ataque que se divide en múltiples proyectiles al impactar?", opciones: ["Spike", "Piper", "Brock", "Amber"], respuesta: 0 },
     { pregunta: "¿Qué brawler tiene una habilidad que invoca un oso?", opciones: ["Nita", "Jessie", "Penny", "Darryl"], respuesta: 0 }
   ]
 };
 
 Object.assign(preguntas, { marvel, brawlStars });
-const jujutsuKaisen = {
+const matematicas = {
   easy: [
-    { pregunta: "¿Quién es el protagonista de Jujutsu Kaisen?", opciones: ["Yuji Itadori", "Megumi Fushiguro", "Satoru Gojo", "Nobara Kugisaki"], respuesta: 0 },
-    { pregunta: "¿Qué objeto maldito se traga Yuji Itadori?", opciones: ["Un dedo", "Un ojo", "Un corazón", "Un talismán"], respuesta: 0 },
-    { pregunta: "¿Quién es conocido como el hechicero más fuerte?", opciones: ["Satoru Gojo", "Suguru Geto", "Kento Nanami", "Yuta Okkotsu"], respuesta: 0 },
-    { pregunta: "¿Qué escuela de hechicería asiste Yuji?", opciones: ["Escuela Técnica de Jujutsu de Tokio", "Escuela de Hechicería de Kioto", "Academia de Magia de Osaka", "Escuela de Exorcismo de Nagoya"], respuesta: 0 },
-    { pregunta: "¿Qué técnica maldita utiliza Nobara Kugisaki?", opciones: ["Martillo y clavos", "Sombras", "Manipulación de sangre", "Control de fuego"], respuesta: 0 },
-    { pregunta: "¿Qué es Sukuna?", opciones: ["Un espíritu maldito", "Un hechicero", "Un dios", "Un demonio"], respuesta: 0 },
-    { pregunta: "¿Qué arma usa Megumi Fushiguro?", opciones: ["Sombras", "Espadas", "Lanzas", "Arcos"], respuesta: 0 }
+    { pregunta: "¿Cuánto es 5 + 3?", opciones: ["6", "7", "8", "9"], respuesta: 2 },
+    { pregunta: "¿Cuánto es 9 x 2?", opciones: ["16", "18", "20", "22"], respuesta: 1 },
+    { pregunta: "¿Cuánto es 12 ÷ 4?", opciones: ["2", "3", "4", "5"], respuesta: 1 },
+    { pregunta: "¿Cuánto es 7 - 4?", opciones: ["1", "2", "3", "4"], respuesta: 2 },
+    { pregunta: "¿Cuánto es 10 x 10?", opciones: ["100", "200", "50", "150"], respuesta: 0 },
+    { pregunta: "¿Cuánto es 15 + 5?", opciones: ["10", "20", "15", "25"], respuesta: 1 },
+    { pregunta: "¿Cuánto es 50 ÷ 5?", opciones: ["5", "10", "15", "20"], respuesta: 1 }
   ],
   medium: [
-    { pregunta: "¿Qué técnica maldita utiliza Satoru Gojo?", opciones: ["Límite Infinito", "Manipulación de Sangre", "Control de Sombras", "Dominio de Fuego"], respuesta: 0 },
-    { pregunta: "¿Quién es el principal antagonista en la primera temporada?", opciones: ["Mahito", "Suguru Geto", "Sukuna", "Hanami"], respuesta: 0 },
-    { pregunta: "¿Qué es un 'Dominio Expandido'?", opciones: ["Una técnica avanzada de maldición", "Un lugar donde se entrenan hechiceros", "Un arma especial", "Un tipo de espíritu"], respuesta: 0 },
-    { pregunta: "¿Qué relación tiene Yuta Okkotsu con Rika?", opciones: ["Es su prometida maldita", "Es su hermana", "Es su maestra", "Es su amiga"], respuesta: 0 },
-    { pregunta: "¿Qué tipo de maldición es Mahito?", opciones: ["Maldición de forma humana", "Maldición de sangre", "Maldición de sombras", "Maldición de fuego"], respuesta: 0 },
-    { pregunta: "¿Qué técnica utiliza Toge Inumaki?", opciones: ["Palabras malditas", "Manipulación de Sombras", "Control de Sangre", "Dominio de Fuego"], respuesta: 0 },
-    { pregunta: "¿Qué es el 'Shikigami' de Megumi?", opciones: ["Criaturas de sombras", "Espíritus de fuego", "Armas malditas", "Talismanes"], respuesta: 0 }
+    { pregunta: "¿Cuánto es 15 x 4?", opciones: ["50", "60", "70", "80"], respuesta: 1 },
+    { pregunta: "¿Cuánto es 144 ÷ 12?", opciones: ["10", "11", "12", "13"], respuesta: 2 },
+    { pregunta: "¿Cuánto es la raíz cuadrada de 64?", opciones: ["6", "7", "8", "9"], respuesta: 2 },
+    { pregunta: "¿Cuánto es 25% de 200?", opciones: ["25", "50", "75", "100"], respuesta: 1 },
+    { pregunta: "¿Cuánto es 81 ÷ 9?", opciones: ["7", "8", "9", "10"], respuesta: 2 },
+    { pregunta: "¿Cuánto es 11 x 11?", opciones: ["111", "121", "131", "141"], respuesta: 1 },
+    { pregunta: "¿Cuánto es 30% de 300?", opciones: ["60", "90", "100", "120"], respuesta: 1 }
   ],
   hard: [
-    { pregunta: "¿Cuántos dedos de Sukuna existen?", opciones: ["10", "15", "20", "25"], respuesta: 2 },
-    { pregunta: "¿Qué técnica utiliza Kento Nanami?", opciones: ["Relación 7:3", "Límite Infinito", "Palabras Malditas", "Manipulación de Sangre"], respuesta: 0 },
-    { pregunta: "¿Quién es el director de la Escuela Técnica de Jujutsu de Tokio?", opciones: ["Masamichi Yaga", "Satoru Gojo", "Suguru Geto", "Kiyotaka Ijichi"], respuesta: 0 },
-    { pregunta: "¿Qué espíritu maldito tiene forma de árbol?", opciones: ["Hanami", "Mahito", "Jogo", "Dagon"], respuesta: 0 },
-    { pregunta: "¿Qué técnica utiliza Choso?", opciones: ["Manipulación de Sangre", "Dominio Expandido", "Palabras Malditas", "Control de Sombras"], respuesta: 0 },
-    { pregunta: "¿Qué es el 'Barco de la Muerte'?", opciones: ["Un ritual maldito", "Un arma especial", "Un espíritu maldito", "Una técnica prohibida"], respuesta: 0 },
-    { pregunta: "¿Qué evento enfrenta la escuela de Tokio contra la escuela de Kioto?", opciones: ["El Intercambio de Estudiantes", "El Torneo de Maldiciones", "La Batalla de Hechiceros", "El Festival de Sombras"], respuesta: 0 }
+    { pregunta: "¿Cuánto es 123 x 45?", opciones: ["5535", "5530", "5525", "5540"], respuesta: 0 },
+    { pregunta: "¿Cuánto es 1024 ÷ 16?", opciones: ["64", "62", "60", "66"], respuesta: 0 },
+    { pregunta: "¿Cuánto es la raíz cúbica de 27?", opciones: ["2", "3", "4", "5"], respuesta: 1 },
+    { pregunta: "¿Cuánto es 7 elevado al cubo (7³)?", opciones: ["243", "343", "441", "512"], respuesta: 1 },
+    { pregunta: "¿Cuánto es 50% de 500?", opciones: ["200", "250", "300", "350"], respuesta: 1 },
+    { pregunta: "¿Cuánto es 12 x 12 x 12?", opciones: ["144", "1728", "1296", "1024"], respuesta: 1 },
+    { pregunta: "¿Cuánto es 2 elevado a la potencia de 10?", opciones: ["1024", "2048", "512", "256"], respuesta: 0 }
   ]
 };
 
-Object.assign(preguntas, { jujutsuKaisen });
+const ciencias = {
+  easy: [
+    { pregunta: "¿Qué planeta es conocido como el 'Planeta Rojo'?", opciones: ["Venus", "Marte", "Júpiter", "Saturno"], respuesta: 1 },
+    { pregunta: "¿Qué gas respiramos principalmente?", opciones: ["Oxígeno", "Nitrógeno", "Dióxido de carbono", "Helio"], respuesta: 0 },
+    { pregunta: "¿Qué órgano bombea sangre en el cuerpo humano?", opciones: ["Pulmones", "Hígado", "Corazón", "Riñones"], respuesta: 2 },
+    { pregunta: "¿Qué planeta es el más grande del sistema solar?", opciones: ["Saturno", "Júpiter", "Urano", "Neptuno"], respuesta: 1 },
+    { pregunta: "¿Qué animal es conocido como el 'rey de la selva'?", opciones: ["Elefante", "León", "Tigre", "Jaguar"], respuesta: 1 },
+    { pregunta: "¿Qué elemento químico tiene el símbolo 'H'?", opciones: ["Helio", "Hidrógeno", "Hierro", "Mercurio"], respuesta: 1 },
+    { pregunta: "¿Qué fuerza mantiene los planetas en órbita alrededor del sol?", opciones: ["Magnetismo", "Gravedad", "Inercia", "Fricción"], respuesta: 1 }
+  ],
+  medium: [
+    { pregunta: "¿Qué planeta tiene anillos visibles?", opciones: ["Júpiter", "Saturno", "Urano", "Neptuno"], respuesta: 1 },
+    { pregunta: "¿Qué elemento químico tiene el símbolo 'Au'?", opciones: ["Plata", "Oro", "Aluminio", "Uranio"], respuesta: 1 },
+    { pregunta: "¿Qué científico propuso la teoría de la relatividad?", opciones: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"], respuesta: 1 },
+    { pregunta: "¿Qué gas es esencial para la fotosíntesis?", opciones: ["Oxígeno", "Dióxido de carbono", "Nitrógeno", "Hidrógeno"], respuesta: 1 },
+    { pregunta: "¿Qué órgano humano es responsable de filtrar la sangre?", opciones: ["Hígado", "Riñones", "Corazón", "Pulmones"], respuesta: 1 },
+    { pregunta: "¿Qué tipo de energía utiliza el sol?", opciones: ["Nuclear", "Eólica", "Solar", "Térmica"], respuesta: 0 },
+    { pregunta: "¿Qué es el ADN?", opciones: ["Ácido desoxirribonucleico", "Ácido ribonucleico", "Proteína", "Enzima"], respuesta: 0 }
+  ],
+  hard: [
+    { pregunta: "¿Qué elemento químico tiene el número atómico 79?", opciones: ["Plata", "Oro", "Platino", "Mercurio"], respuesta: 1 },
+    { pregunta: "¿Qué planeta tiene el día más largo del sistema solar?", opciones: ["Venus", "Mercurio", "Marte", "Neptuno"], respuesta: 0 },
+    { pregunta: "¿Qué científico descubrió la penicilina?", opciones: ["Alexander Fleming", "Marie Curie", "Louis Pasteur", "Isaac Newton"], respuesta: 0 },
+    { pregunta: "¿Qué unidad mide la intensidad de la corriente eléctrica?", opciones: ["Voltios", "Amperios", "Ohmios", "Watts"], respuesta: 1 },
+    { pregunta: "¿Qué tipo de roca se forma a partir de lava enfriada?", opciones: ["Ígnea", "Sedimentaria", "Metamórfica", "Basáltica"], respuesta: 0 },
+    { pregunta: "¿Qué partícula subatómica tiene carga negativa?", opciones: ["Protón", "Neutrón", "Electrón", "Quark"], respuesta: 2 },
+    { pregunta: "¿Qué teoría explica el origen del universo?", opciones: ["Teoría de la Relatividad", "Teoría del Big Bang", "Teoría de la Evolución", "Teoría de Cuerdas"], respuesta: 1 }
+  ]
+};
+
+Object.assign(preguntas, { matematicas, ciencias });
