@@ -540,15 +540,6 @@ function seleccionarOpcion(idx) {
     }
 }
 
-document.getElementById('siguiente-pregunta').addEventListener('click', function() {
-    indicePregunta++;
-    if (indicePregunta < preguntasActuales.length) {
-        mostrarPregunta();
-    } else {
-        mostrarResultado();
-    }
-});
-
 function mostrarResultado() {
     document.querySelector('.quiz-pregunta').style.display = 'none';
     document.querySelector('.quiz-final').style.display = 'block';
@@ -983,3 +974,399 @@ const ciencias = {
 };
 
 Object.assign(preguntas, { matematicas, ciencias });
+const anime = {
+  easy: [
+    { pregunta: "¿Cómo se llama el protagonista de Naruto?", opciones: ["Sasuke", "Naruto", "Kakashi", "Sakura"], respuesta: 1 },
+    { pregunta: "¿Qué anime es famoso por la frase 'Gotta catch 'em all'?", opciones: ["Dragon Ball", "Pokemon", "One Piece", "Digimon"], respuesta: 1 },
+    { pregunta: "¿En qué anime aparece el personaje Pikachu?", opciones: ["Pokemon", "Digimon", "Yu-Gi-Oh", "Sailor Moon"], respuesta: 0 },
+    { pregunta: "¿Qué anime es sobre un chico que quiere ser el Hokage?", opciones: ["One Piece", "Naruto", "Bleach", "Dragon Ball"], respuesta: 1 },
+    { pregunta: "¿Cómo se llama el protagonista de Dragon Ball?", opciones: ["Vegeta", "Piccolo", "Goku", "Gohan"], respuesta: 2 },
+    { pregunta: "¿Qué anime trata sobre piratas que buscan un tesoro?", opciones: ["Naruto", "One Piece", "Bleach", "Attack on Titan"], respuesta: 1 },
+    { pregunta: "¿En qué anime los personajes luchan contra titanes gigantes?", opciones: ["Attack on Titan", "Tokyo Ghoul", "Death Note", "Demon Slayer"], respuesta: 0 }
+  ],
+  medium: [
+    { pregunta: "¿Cómo se llama la espada de Ichigo en Bleach?", opciones: ["Zangetsu", "Sode no Shirayuki", "Hyorinmaru", "Benihime"], respuesta: 0 },
+    { pregunta: "¿Qué fruta del diablo come Luffy en One Piece?", opciones: ["Gomu Gomu", "Mera Mera", "Hie Hie", "Yami Yami"], respuesta: 0 },
+    { pregunta: "¿Quién es el Shinigami en Death Note?", opciones: ["Light", "L", "Ryuk", "Misa"], respuesta: 2 },
+    { pregunta: "¿Cómo se llama el protagonista de My Hero Academia?", opciones: ["Bakugo", "Todoroki", "Midoriya", "Iida"], respuesta: 2 },
+    { pregunta: "¿Qué técnica es famosa de Goku en Dragon Ball?", opciones: ["Rasengan", "Kamehameha", "Chidori", "Bankai"], respuesta: 1 },
+    { pregunta: "¿En qué anime aparece el personaje Edward Elric?", opciones: ["Fullmetal Alchemist", "Soul Eater", "Blue Exorcist", "Fairy Tail"], respuesta: 0 },
+    { pregunta: "¿Cómo se llama la organización criminal en Naruto?", opciones: ["Espada", "Akatsuki", "Phantom Troupe", "League of Villains"], respuesta: 1 }
+  ],
+  hard: [
+    { pregunta: "¿Quién creó el manga de One Piece?", opciones: ["Masashi Kishimoto", "Eiichiro Oda", "Tite Kubo", "Akira Toriyama"], respuesta: 1 },
+    { pregunta: "¿En qué año se estrenó el anime original de Dragon Ball?", opciones: ["1984", "1986", "1988", "1990"], respuesta: 1 },
+    { pregunta: "¿Cómo se llama el protagonista de Jojo's Bizarre Adventure parte 3?", opciones: ["Jonathan Joestar", "Joseph Joestar", "Jotaro Kujo", "Josuke Higashikata"], respuesta: 2 },
+    { pregunta: "¿Qué estudio de animación creó Spirited Away?", opciones: ["Studio Pierrot", "Madhouse", "Studio Ghibli", "Toei Animation"], respuesta: 2 },
+    { pregunta: "¿Cuántas formas de Super Saiyan alcanza Goku en Dragon Ball Z?", opciones: ["2", "3", "4", "5"], respuesta: 1 },
+    { pregunta: "¿Qué significa 'Bankai' en Bleach?", opciones: ["Liberación inicial", "Liberación final", "Técnica especial", "Transformación"], respuesta: 1 },
+    { pregunta: "¿En qué anime aparece la 'Ley del Intercambio Equivalente'?", opciones: ["Fullmetal Alchemist", "Hunter x Hunter", "Code Geass", "Steins;Gate"], respuesta: 0 }
+  ]
+};
+
+const baloncesto = {
+  easy: [
+    { pregunta: "¿Cuántos jugadores hay en cancha por equipo en baloncesto?", opciones: ["4", "5", "6", "7"], respuesta: 1 },
+    { pregunta: "¿Cuántos puntos vale una canasta normal en baloncesto?", opciones: ["1", "2", "3", "4"], respuesta: 1 },
+    { pregunta: "¿Cómo se llama la línea desde donde se anotan 3 puntos?", opciones: ["Línea de tres", "Línea libre", "Línea de falta", "Línea central"], respuesta: 0 },
+    { pregunta: "¿Qué significa NBA?", opciones: ["National Basketball Association", "North Basketball America", "New Basketball Arena", "National Ball Association"], respuesta: 0 },
+    { pregunta: "¿Cuánto dura un partido de NBA?", opciones: ["40 minutos", "48 minutos", "50 minutos", "60 minutos"], respuesta: 1 },
+    { pregunta: "¿Qué jugador es conocido como 'His Airness'?", opciones: ["Kobe Bryant", "LeBron James", "Michael Jordan", "Magic Johnson"], respuesta: 2 },
+    { pregunta: "¿Qué equipo juega en Los Ángeles y usa colores morado y dorado?", opciones: ["Lakers", "Clippers", "Warriors", "Kings"], respuesta: 0 }
+  ],
+  medium: [
+    { pregunta: "¿Quién tiene el récord de más puntos en un solo juego de NBA?", opciones: ["Michael Jordan", "Kobe Bryant", "Wilt Chamberlain", "LeBron James"], respuesta: 2 },
+    { pregunta: "¿Qué equipo ganó el primer campeonato de la NBA?", opciones: ["Lakers", "Celtics", "Warriors", "76ers"], respuesta: 2 },
+    { pregunta: "¿Cuántos títulos de NBA ganaron los Chicago Bulls en los 90s?", opciones: ["4", "5", "6", "7"], respuesta: 2 },
+    { pregunta: "¿Qué jugador es conocido como 'The King'?", opciones: ["Kevin Durant", "LeBron James", "Stephen Curry", "Giannis Antetokounmpo"], respuesta: 1 },
+    { pregunta: "¿Qué altura tiene un aro de baloncesto oficial?", opciones: ["3.00 metros", "3.05 metros", "3.10 metros", "3.15 metros"], respuesta: 1 },
+    { pregunta: "¿Qué equipo tiene más campeonatos en la historia de la NBA?", opciones: ["Lakers", "Celtics", "Bulls", "Warriors"], respuesta: 1 },
+    { pregunta: "¿Qué significa MVP en baloncesto?", opciones: ["Most Valuable Player", "Most Versatile Player", "Maximum Value Player", "Major Victory Player"], respuesta: 0 }
+  ],
+  hard: [
+    { pregunta: "¿Quién anotó 81 puntos en un solo juego en 2006?", opciones: ["Michael Jordan", "Kobe Bryant", "LeBron James", "Shaquille O'Neal"], respuesta: 1 },
+    { pregunta: "¿Qué jugador tiene más títulos de MVP en la historia de la NBA?", opciones: ["Michael Jordan", "Kareem Abdul-Jabbar", "LeBron James", "Magic Johnson"], respuesta: 1 },
+    { pregunta: "¿En qué año se fundó la NBA?", opciones: ["1946", "1949", "1950", "1953"], respuesta: 0 },
+    { pregunta: "¿Qué jugador tiene el récord de más rebotes en un solo juego?", opciones: ["Wilt Chamberlain", "Bill Russell", "Dennis Rodman", "Shaquille O'Neal"], respuesta: 0 },
+    { pregunta: "¿Cuántos triple-dobles tiene Russell Westbrook en su carrera?", opciones: ["Más de 150", "Más de 180", "Más de 200", "Más de 220"], respuesta: 2 },
+    { pregunta: "¿Qué equipo tuvo la mejor temporada regular con 73 victorias?", opciones: ["Chicago Bulls", "Los Angeles Lakers", "Golden State Warriors", "San Antonio Spurs"], respuesta: 2 },
+    { pregunta: "¿Quién es el jugador más joven en anotar 30,000 puntos en la NBA?", opciones: ["Kobe Bryant", "LeBron James", "Michael Jordan", "Kevin Durant"], respuesta: 1 }
+  ]
+};
+
+const videojuegos = {
+  easy: [
+    { pregunta: "¿Qué fontanero italiano es protagonista de varios videojuegos de Nintendo?", opciones: ["Luigi", "Mario", "Wario", "Yoshi"], respuesta: 1 },
+    { pregunta: "¿En qué videojuego debes construir y sobrevivir usando bloques?", opciones: ["Fortnite", "Minecraft", "Roblox", "Terraria"], respuesta: 1 },
+    { pregunta: "¿Qué videojuego de batalla real es famoso por sus bailes?", opciones: ["PUBG", "Apex Legends", "Fortnite", "Call of Duty"], respuesta: 2 },
+    { pregunta: "¿Qué consola creó Nintendo en 2017?", opciones: ["Switch", "Wii U", "3DS", "GameCube"], respuesta: 0 },
+    { pregunta: "¿En qué videojuego capturas criaturas llamadas Pokémon?", opciones: ["Digimon", "Pokémon", "Yo-Kai Watch", "Monster Hunter"], respuesta: 1 },
+    { pregunta: "¿Qué personaje azul corre muy rápido y come anillos dorados?", opciones: ["Sonic", "Mega Man", "Pac-Man", "Kirby"], respuesta: 0 },
+    { pregunta: "¿Qué empresa creó PlayStation?", opciones: ["Microsoft", "Nintendo", "Sony", "Sega"], respuesta: 2 }
+  ],
+  medium: [
+    { pregunta: "¿Qué videojuego popularizó el género Battle Royale?", opciones: ["Fortnite", "PUBG", "H1Z1", "Apex Legends"], respuesta: 1 },
+    { pregunta: "¿En qué videojuego Link debe rescatar a la Princesa Zelda?", opciones: ["The Legend of Zelda", "Final Fantasy", "Fire Emblem", "Xenoblade"], respuesta: 0 },
+    { pregunta: "¿Qué videojuego de Rockstar transcurre en Vice City?", opciones: ["GTA San Andreas", "GTA Vice City", "GTA IV", "Red Dead Redemption"], respuesta: 1 },
+    { pregunta: "¿Cuál es la consola más vendida de todos los tiempos?", opciones: ["PlayStation 2", "Nintendo DS", "PlayStation 4", "Nintendo Switch"], respuesta: 0 },
+    { pregunta: "¿Qué personaje es la mascota de PlayStation?", opciones: ["Crash Bandicoot", "Spyro", "Ratchet", "No tiene mascota oficial"], respuesta: 3 },
+    { pregunta: "¿En qué año se lanzó el primer Super Mario Bros?", opciones: ["1983", "1985", "1987", "1989"], respuesta: 1 },
+    { pregunta: "¿Qué videojuego es conocido por la frase 'The cake is a lie'?", opciones: ["Portal", "Half-Life", "Team Fortress", "Left 4 Dead"], respuesta: 0 }
+  ],
+  hard: [
+    { pregunta: "¿Quién es el creador de Minecraft?", opciones: ["Markus Persson (Notch)", "Shigeru Miyamoto", "Hideo Kojima", "John Carmack"], respuesta: 0 },
+    { pregunta: "¿Qué videojuego ganó el Game of the Year en 2018?", opciones: ["Red Dead Redemption 2", "God of War", "Spider-Man", "Monster Hunter World"], respuesta: 1 },
+    { pregunta: "¿Cuál fue el primer videojuego comercial exitoso?", opciones: ["Pac-Man", "Pong", "Space Invaders", "Asteroids"], respuesta: 1 },
+    { pregunta: "¿Qué empresa desarrolló Half-Life?", opciones: ["Valve", "id Software", "Epic Games", "Blizzard"], respuesta: 0 },
+    { pregunta: "¿En qué año se fundó Nintendo?", opciones: ["1885", "1889", "1895", "1900"], respuesta: 1 },
+    { pregunta: "¿Qué videojuego causó controversia por su violencia en los 90s?", opciones: ["Doom", "Mortal Kombat", "Grand Theft Auto", "Todos los anteriores"], respuesta: 3 },
+    { pregunta: "¿Cuál es el videojuego más vendido de todos los tiempos?", opciones: ["Tetris", "Minecraft", "GTA V", "Super Mario Bros"], respuesta: 1 }
+  ]
+};
+
+Object.assign(preguntas, { anime, baloncesto, videojuegos });
+// Variables para el modo desafío
+let modoDesafio = false;
+let preguntasDesafio = [];
+let tiempoRestante = 0;
+let intervaloTiempo = null;
+let dificultadDesafio = 'easy';
+let preguntasCompletadasDesafio = 0;
+
+// Configuración de tiempo por dificultad (en segundos)
+const tiemposPorDificultad = {
+    easy: 8,
+    medium: 7,
+    hard: 5
+};
+
+// Puntos bonus por completar modo desafío
+const puntosBonus = {
+    easy: 10,
+    medium: 15,
+    hard: 20
+};
+
+// Generar preguntas aleatorias para el modo desafío
+function generarPreguntasDesafio(dificultad, cantidad = 10) {
+    const todasLasPreguntas = [];
+    
+    // Recopilar todas las preguntas de la dificultad seleccionada
+    Object.keys(preguntas).forEach(tema => {
+        if (preguntas[tema][dificultad]) {
+            preguntas[tema][dificultad].forEach(pregunta => {
+                todasLasPreguntas.push({
+                    ...pregunta,
+                    tema: tema
+                });
+            });
+        }
+    });
+    
+    // Mezclar y seleccionar cantidad específica
+    const preguntasMezcladas = todasLasPreguntas.sort(() => Math.random() - 0.5);
+    return preguntasMezcladas.slice(0, cantidad);
+}
+
+// Iniciar modo desafío
+function iniciarModoDesafio() {
+    modoDesafio = true;
+    dificultadDesafio = document.querySelector('input[name="dificultad"]:checked').value;
+    preguntasDesafio = generarPreguntasDesafio(dificultadDesafio, 10);
+    indicePregunta = 0;
+    puntos = 0;
+    preguntasCompletadasDesafio = 0;
+    
+    document.querySelector('.quiz-config').style.display = 'none';
+    document.querySelector('.quiz-final').style.display = 'none';
+    document.querySelector('.quiz-pregunta').style.display = 'block';
+    
+    // Mostrar indicador de modo desafío
+    mostrarIndicadorDesafio();
+    mostrarPreguntaDesafio();
+}
+
+// Mostrar indicador visual del modo desafío
+function mostrarIndicadorDesafio() {
+    const indicador = document.createElement('div');
+    indicador.id = 'indicador-desafio';
+    indicador.innerHTML = `
+        <div class="desafio-header">
+            <h3>🏆 MODO DESAFÍO</h3>
+            <div class="desafio-info">
+                <span>Dificultad: ${dificultadDesafio.toUpperCase()}</span>
+                <span>Pregunta: ${indicePregunta + 1}/10</span>
+            </div>
+            <div class="temporizador" id="temporizador">
+                <span id="tiempo-restante">${tiemposPorDificultad[dificultadDesafio]}</span>
+            </div>
+        </div>
+    `;
+    
+    // Insertar al inicio del contenedor de pregunta
+    const contenedorPregunta = document.querySelector('.quiz-pregunta');
+    
+    // Eliminar indicador anterior si existe para evitar duplicados
+    const indicadorViejo = document.getElementById('indicador-desafio');
+    if (indicadorViejo) {
+        indicadorViejo.remove();
+    }
+    contenedorPregunta.insertBefore(indicador, contenedorPregunta.firstChild);
+}
+
+// Mostrar pregunta en modo desafío
+function mostrarPreguntaDesafio() {
+    if (indicePregunta >= preguntasDesafio.length) {
+        finalizarModoDesafio();
+        return;
+    }
+    
+    const preguntaObj = preguntasDesafio[indicePregunta];
+    document.getElementById('pregunta-texto').textContent = `[${preguntaObj.tema.toUpperCase()}] ${preguntaObj.pregunta}`;
+    
+    const opcionesDiv = document.getElementById('opciones');
+    opcionesDiv.innerHTML = '';
+    
+    preguntaObj.opciones.forEach((op, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'opcion-btn';
+        btn.textContent = op;
+        btn.onclick = () => seleccionarOpcionDesafio(idx);
+        opcionesDiv.appendChild(btn);
+    });
+    
+    document.getElementById('siguiente-pregunta').style.display = 'none';
+    
+    // Actualizar indicador
+    const indicadorInfo = document.querySelector('.desafio-info');
+    if (indicadorInfo) {
+        indicadorInfo.innerHTML = `
+            <span>Dificultad: ${dificultadDesafio.toUpperCase()}</span>
+            <span>Pregunta: ${indicePregunta + 1}/10</span>
+        `;
+    }
+    
+    // Iniciar temporizador
+    iniciarTemporizador();
+}
+
+// Iniciar temporizador
+function iniciarTemporizador() {
+    tiempoRestante = tiemposPorDificultad[dificultadDesafio];
+    const tiempoDisplay = document.getElementById('tiempo-restante');
+    const temporizador = document.getElementById('temporizador');
+    
+    if (tiempoDisplay) {
+        tiempoDisplay.textContent = tiempoRestante;
+    }
+    
+    // Reiniciar estilos del temporizador
+    temporizador.style.backgroundColor = 'transparent';
+    temporizador.style.animation = 'none';
+
+    // Limpiar intervalo anterior si existe
+    if (intervaloTiempo) {
+        clearInterval(intervaloTiempo);
+    }
+    
+    intervaloTiempo = setInterval(() => {
+        tiempoRestante--;
+        if (tiempoDisplay) {
+            tiempoDisplay.textContent = tiempoRestante;
+        }
+        
+        // Cambiar color cuando queda poco tiempo
+        if (temporizador) {
+            if (tiempoRestante <= 2) {
+                temporizador.style.backgroundColor = '#ef4444';
+                temporizador.style.animation = 'pulse 0.5s infinite';
+            } else if (tiempoRestante <= 4) {
+                temporizador.style.backgroundColor = '#f59e0b';
+            }
+        }
+        
+        // Tiempo agotado
+        if (tiempoRestante <= 0) {
+            clearInterval(intervaloTiempo);
+            tiempoAgotadoDesafio();
+        }
+    }, 1000);
+}
+
+// Cuando se agota el tiempo
+function tiempoAgotadoDesafio() {
+    // Deshabilitar botones
+    document.querySelectorAll('.opcion-btn').forEach(btn => btn.disabled = true);
+    
+    // Mostrar respuesta correcta
+    const correcta = preguntasDesafio[indicePregunta].respuesta;
+    document.querySelectorAll('.opcion-btn')[correcta].style.background = '#34d399';
+    
+    // Mostrar mensaje de tiempo agotado
+    const mensaje = document.createElement('div');
+    mensaje.className = 'mensaje-tiempo';
+    mensaje.textContent = '⏰ ¡Tiempo agotado!';
+    mensaje.style.color = '#ef4444';
+    mensaje.style.fontWeight = 'bold';
+    mensaje.style.textAlign = 'center';
+    mensaje.style.marginTop = '10px';
+    
+    document.getElementById('opciones').appendChild(mensaje);
+    
+    // Mostrar botón siguiente después de 2 segundos
+    setTimeout(() => {
+        document.getElementById('siguiente-pregunta').style.display = 'inline-block';
+    }, 2000);
+}
+
+// Seleccionar opción en modo desafío
+function seleccionarOpcionDesafio(idx) {
+    // Detener temporizador
+    if (intervaloTiempo) {
+        clearInterval(intervaloTiempo);
+    }
+    
+    respuestaSeleccionada = idx;
+    document.querySelectorAll('.opcion-btn').forEach(btn => btn.disabled = true);
+    
+    const correcta = preguntasDesafio[indicePregunta].respuesta;
+    document.querySelectorAll('.opcion-btn')[correcta].style.background = '#34d399';
+    
+    if (idx !== correcta) {
+        document.querySelectorAll('.opcion-btn')[idx].style.background = '#ef4444';
+    } else {
+        puntos++;
+        // Bonus por tiempo restante
+        const bonusTiempo = Math.floor(tiempoRestante / 2);
+        puntos += bonusTiempo;
+    }
+    
+    preguntasCompletadasDesafio++;
+    document.getElementById('siguiente-pregunta').style.display = 'inline-block';
+}
+
+// Finalizar modo desafío
+function finalizarModoDesafio() {
+    modoDesafio = false;
+    
+    // Limpiar temporizador
+    if (intervaloTiempo) {
+        clearInterval(intervaloTiempo);
+    }
+    
+    // Quitar indicador
+    const indicador = document.getElementById('indicador-desafio');
+    if (indicador) {
+        indicador.remove();
+    }
+    
+    // Calcular puntos totales con bonus
+    const puntosBase = puntos;
+    const bonus = puntosBonus[dificultadDesafio];
+    const puntosFinales = puntosBase + bonus;
+    
+    document.querySelector('.quiz-pregunta').style.display = 'none';
+    document.querySelector('.quiz-final').style.display = 'block';
+    
+    document.getElementById('resultado').innerHTML = `
+        <div class="resultado-desafio">
+            <h3>🏆 ¡DESAFÍO COMPLETADO!</h3>
+            <p>Respuestas correctas: ${puntosBase}/10</p>
+            <p>Puntos base: ${puntosBase}</p>
+            <p>Bonus por completar desafío: +${bonus}</p>
+            <p><strong>Total: ${puntosFinales} puntos</strong></p>
+        </div>
+    `;
+    
+    // Actualizar puntos totales del usuario
+    let usuario = localStorage.getItem('usuario') || 'Usuario';
+    let puntosTotales = parseInt(localStorage.getItem(`quiz_${usuario}_puntos`) || '0', 10);
+    puntosTotales += puntosFinales;
+    localStorage.setItem(`quiz_${usuario}_puntos`, puntosTotales);
+    document.getElementById('puntos-totales').textContent = puntosTotales;
+    
+    // Restablecer para próximo juego
+    puntos = 0;
+}
+
+// Modificar el botón de comenzar quiz para incluir modo desafío
+document.getElementById('comenzar-quiz').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Verificar si está activado el modo desafío
+    const modoDesafioCheckbox = document.getElementById('modo-desafio');
+    
+    if (modoDesafioCheckbox && modoDesafioCheckbox.checked) {
+        iniciarModoDesafio();
+    } else {
+        // Lógica normal del quiz (código existente)
+        const tema = document.getElementById('select-tema').value;
+        const dificultad = document.querySelector('input[name="dificultad"]:checked').value;
+        preguntasActuales = preguntas[tema][dificultad];
+        indicePregunta = 0;
+        puntos = 0;
+        document.querySelector('.quiz-config').style.display = 'none';
+        document.querySelector('.quiz-final').style.display = 'none';
+        document.querySelector('.quiz-pregunta').style.display = 'block';
+        mostrarPregunta();
+    }
+});
+
+// Modificar el botón siguiente para manejar modo desafío
+document.getElementById('siguiente-pregunta').addEventListener('click', function() {
+    if (modoDesafio) {
+        indicePregunta++;
+        if (indicePregunta < preguntasDesafio.length) {
+            mostrarPreguntaDesafio();
+        } else {
+            finalizarModoDesafio();
+        }
+    } else { // Lógica para el modo normal
+        indicePregunta++;
+        if (indicePregunta < preguntasActuales.length) {
+            mostrarPregunta();
+        } else {
+            mostrarResultado();
+        }
+    }
+});
