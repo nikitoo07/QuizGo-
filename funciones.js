@@ -1,73 +1,95 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const registroForm = document.getElementById('registro-form');
     const loginForm = document.getElementById('login-form');
     const mostrarLogin = document.getElementById('mostrar-login');
     const mostrarRegistro = document.getElementById('mostrar-registro');
+    const btnInvitado = document.getElementById('jugar-invitado');
+    const btnTema = document.getElementById('cambiar-tema');
 
-    mostrarLogin.addEventListener('click', function(e) {
-        e.preventDefault();
-        registroForm.style.display = 'none';
-        loginForm.style.display = 'flex';
-        loginForm.style.flexDirection = 'column';
-        loginForm.style.gap = '1rem';
-    });
+    // --- Lógica de Navegación (Login/Registro) ---
+    if (mostrarLogin) {
+        mostrarLogin.addEventListener('click', function (e) {
+            e.preventDefault();
+            registroForm.style.display = 'none';
+            loginForm.style.display = 'flex';
+            loginForm.style.flexDirection = 'column';
+            loginForm.style.gap = '1rem';
+        });
+    }
 
-    mostrarRegistro.addEventListener('click', function(e) {
-        e.preventDefault();
-        loginForm.style.display = 'none';
-        registroForm.style.display = 'flex';
-        registroForm.style.flexDirection = 'column';
-        registroForm.style.gap = '1rem';
-    });
+    if (mostrarRegistro) {
+        mostrarRegistro.addEventListener('click', function (e) {
+            e.preventDefault();
+            loginForm.style.display = 'none';
+            registroForm.style.display = 'flex';
+            registroForm.style.flexDirection = 'column';
+            registroForm.style.gap = '1rem';
+        });
+    }
 
-   
-    registroForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+    // --- Lógica de Registro ---
+    if (registroForm) {
+        registroForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
 
-        const username = document.getElementById('username').value.trim();
-        const password = document.getElementById('password').value.trim();
+            if (username === '' || password === '') {
+                // Reemplazamos alert con un console.log para no bloquear
+                console.warn('Por favor, completa todos los campos.');
+                return;
+            }
 
-        if (username === '' || password === '') {
-            alert('Por favor, completa todos los campos.');
-            return;
-        }
+            localStorage.setItem('usuario', username);
+            localStorage.setItem('contraseña', password);
+            console.log('¡Registro exitoso!');
+            registroForm.reset();
+            // Opcional: mostrar el formulario de login después del registro
+            registroForm.style.display = 'none';
+            loginForm.style.display = 'flex';
+        });
+    }
 
-    
-        localStorage.setItem('usuario', username);
-        localStorage.setItem('contraseña', password);
+    // --- Lógica de Login ---
+    if (loginForm) {
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const username = document.getElementById('login-username').value.trim();
+            const password = document.getElementById('login-password').value.trim();
+            const usuarioGuardado = localStorage.getItem('usuario');
+            const contraseñaGuardada = localStorage.getItem('contraseña');
 
-        alert('¡Registro exitoso!');
-        registroForm.reset();
-    });
+            if (username === usuarioGuardado && password === contraseñaGuardada) {
+                console.log('¡Inicio de sesión exitoso!');
+                entrarAlQuiz(username);
+            } else {
+                console.error('Usuario o contraseña incorrectos.');
+            }
+        });
+    }
 
-   
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+    // --- Lógica de Invitado ---
+    if (btnInvitado) {
+        btnInvitado.addEventListener('click', function (e) {
+            e.preventDefault();
+            entrarAlQuiz("Invitado");
+        });
+    }
 
-        const username = document.getElementById('login-username').value.trim();
-        const password = document.getElementById('login-password').value.trim();
-
-        const usuarioGuardado = localStorage.getItem('usuario');
-        const contraseñaGuardada = localStorage.getItem('contraseña');
-
-        if (username === usuarioGuardado && password === contraseñaGuardada) {
-            alert('¡Inicio de sesión exitoso!');
-        } else {
-            alert('Usuario o contraseña incorrectos.');
-        }
-    });
+    // --- Lógica de Tema Oscuro ---
+    if (btnTema) {
+        let oscuro = document.body.classList.contains('tema-oscuro');
+        btnTema.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.body.classList.toggle('tema-oscuro');
+            oscuro = !oscuro;
+            btnTema.textContent = oscuro ? 'Cambiar a tema claro' : 'Cambiar tema';
+        });
+    }
 });
-//boton tema oscuro//
-const btnTema = document.getElementById('cambiar-tema');
-let oscuro = false;
-btnTema.addEventListener('click', (e) => {
-    e.preventDefault(); // evita cualquier submit accidental
-    document.body.classList.toggle('tema-oscuro');
-    oscuro = !oscuro;
-    btnTema.textContent = oscuro ? 'Cambiar a tema claro' : 'Cambiar tema';
-});
-        //logica del quiz(falto diseño, añadelo porfi :,v)//
-        function entrarAlQuiz(usuario) {
+
+//logica del quiz(falto diseño, añadelo porfi :,v)//
+function entrarAlQuiz(usuario) {
     if (typeof cargarUsuario === 'function') {
         cargarUsuario(usuario);
     } else {
@@ -83,7 +105,7 @@ btnTema.addEventListener('click', (e) => {
     const quizContainer = document.getElementById('quiz-container');
     if (registroForm) registroForm.style.display = 'none';
     if (loginForm) loginForm.style.display = 'none';
-    if (quizContainer) quizContainer.style.display = 'block';
+    if (quizContainer) quizContainer.style.display = 'flex'; // Usamos flex para consistencia
 
     // OCULTAR el botón de invitado al entrar al quiz
     const btnInvitado = document.getElementById('jugar-invitado');
@@ -98,27 +120,6 @@ btnTema.addEventListener('click', (e) => {
 
     if (typeof actualizarStatsUI === 'function') actualizarStatsUI();
 }
-   document.addEventListener('DOMContentLoaded', () => {
-    const registroForm = document.getElementById('registro-form');
-    if (registroForm && !registroForm.dataset._quizHandler) {
-        registroForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const usuario = (document.getElementById('username')?.value || '').trim() || 'Usuario';
-            entrarAlQuiz(usuario);
-        });
-        registroForm.dataset._quizHandler = '1';
-    }
-
-    const loginForm = document.getElementById('login-form');
-    if (loginForm && !loginForm.dataset._quizHandler) {
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-                        const usuario = (document.getElementById('login-username')?.value || '').trim() || 'Usuario';
-            entrarAlQuiz(usuario);
-        });
-        loginForm.dataset._quizHandler = '1';
-    }
-});
 
 // 1. Banco de preguntas por dificultad y tema (7 por cada una)
 const preguntas = {
@@ -493,22 +494,15 @@ let preguntasActuales = [];
 let indicePregunta = 0;
 let puntos = 0;
 
-// 2. Iniciar el quiz al hacer clic en "Comenzar Quiz"
-document.getElementById('comenzar-quiz').addEventListener('click', function(e) {
-    e.preventDefault();
-    const tema = document.getElementById('select-tema').value;
-    const dificultad = document.querySelector('input[name="dificultad"]:checked').value;
-    preguntasActuales = preguntas[tema][dificultad];
-    indicePregunta = 0;
-    puntos = 0;
-    document.querySelector('.quiz-config').style.display = 'none';
-    document.querySelector('.quiz-final').style.display = 'none';
-    document.querySelector('.quiz-pregunta').style.display = 'block';
-    mostrarPregunta();
-});
 
 // 3. Mostrar pregunta y opciones
 function mostrarPregunta() {
+    // Actualizar barra de progreso
+    const progressBar = document.getElementById('progress-bar');
+    const progreso = ((indicePregunta + 1) / preguntasActuales.length) * 100;
+    progressBar.style.width = `${progreso}%`;
+
+
     const preguntaObj = preguntasActuales[indicePregunta];
     document.getElementById('pregunta-texto').textContent = preguntaObj.pregunta;
     const opcionesDiv = document.getElementById('opciones');
@@ -533,10 +527,13 @@ function seleccionarOpcion(idx) {
    
     const correcta = preguntasActuales[indicePregunta].respuesta;
     document.querySelectorAll('.opcion-btn')[correcta].style.background = '#34d399';
+    
     if (idx !== correcta) {
         document.querySelectorAll('.opcion-btn')[idx].style.background = '#ef4444';
+        document.querySelectorAll('.opcion-btn')[idx].classList.add('incorrect-feedback');
     } else {
         puntos++;
+        document.querySelectorAll('.opcion-btn')[idx].classList.add('correct-feedback');
     }
 }
 
@@ -553,6 +550,13 @@ function mostrarResultado() {
     document.getElementById('puntos-totales').textContent = puntosTotales;
 }
 
+function reiniciarEstadoQuiz() {
+    modoDesafio = false;
+    if (intervaloTiempo) {
+        clearInterval(intervaloTiempo);
+    }
+}
+
 
 document.getElementById('regresar-config').addEventListener('click', function() {
     document.querySelector('.quiz-pregunta').style.display = 'none';
@@ -560,15 +564,9 @@ document.getElementById('regresar-config').addEventListener('click', function() 
 });
 
 document.getElementById('reiniciar-quiz').addEventListener('click', function() {
+    reiniciarEstadoQuiz();
     document.querySelector('.quiz-final').style.display = 'none';
     document.querySelector('.quiz-config').style.display = 'block';
-});
-
-// Botón "Jugar como invitado"
-document.getElementById('jugar-invitado').addEventListener('click', function(e) {
-    e.preventDefault();
-    localStorage.setItem('usuario', 'Invitado');
-    entrarAlQuiz("invitado");
 });
 
 
@@ -1071,6 +1069,7 @@ let preguntasDesafio = [];
 let tiempoRestante = 0;
 let intervaloTiempo = null;
 let dificultadDesafio = 'easy';
+let respuestasCorrectasDesafio = 0;
 let preguntasCompletadasDesafio = 0;
 
 // Configuración de tiempo por dificultad (en segundos)
@@ -1115,12 +1114,13 @@ function iniciarModoDesafio() {
     preguntasDesafio = generarPreguntasDesafio(dificultadDesafio, 10);
     indicePregunta = 0;
     puntos = 0;
+    respuestasCorrectasDesafio = 0;
     preguntasCompletadasDesafio = 0;
     
     document.querySelector('.quiz-config').style.display = 'none';
     document.querySelector('.quiz-final').style.display = 'none';
     document.querySelector('.quiz-pregunta').style.display = 'block';
-    
+
     // Mostrar indicador de modo desafío
     mostrarIndicadorDesafio();
     mostrarPreguntaDesafio();
@@ -1156,6 +1156,11 @@ function mostrarIndicadorDesafio() {
 
 // Mostrar pregunta en modo desafío
 function mostrarPreguntaDesafio() {
+    // Actualizar barra de progreso
+    const progressBar = document.getElementById('progress-bar');
+    const progreso = ((indicePregunta + 1) / preguntasDesafio.length) * 100;
+    progressBar.style.width = `${progreso}%`;
+
     if (indicePregunta >= preguntasDesafio.length) {
         finalizarModoDesafio();
         return;
@@ -1274,9 +1279,12 @@ function seleccionarOpcionDesafio(idx) {
     
     if (idx !== correcta) {
         document.querySelectorAll('.opcion-btn')[idx].style.background = '#ef4444';
+        document.querySelectorAll('.opcion-btn')[idx].classList.add('incorrect-feedback');
     } else {
+        respuestasCorrectasDesafio++;
         puntos++;
         // Bonus por tiempo restante
+        document.querySelectorAll('.opcion-btn')[idx].classList.add('correct-feedback');
         const bonusTiempo = Math.floor(tiempoRestante / 2);
         puntos += bonusTiempo;
     }
@@ -1287,7 +1295,7 @@ function seleccionarOpcionDesafio(idx) {
 
 // Finalizar modo desafío
 function finalizarModoDesafio() {
-    modoDesafio = false;
+    reiniciarEstadoQuiz();
     
     // Limpiar temporizador
     if (intervaloTiempo) {
@@ -1311,9 +1319,9 @@ function finalizarModoDesafio() {
     document.getElementById('resultado').innerHTML = `
         <div class="resultado-desafio">
             <h3>🏆 ¡DESAFÍO COMPLETADO!</h3>
-            <p>Respuestas correctas: ${puntosBase}/10</p>
-            <p>Puntos base: ${puntosBase}</p>
-            <p>Bonus por completar desafío: +${bonus}</p>
+            <p>Respuestas correctas: ${respuestasCorrectasDesafio}/10</p>
+            <p>Puntos de partida (incluye bonus de tiempo): ${puntosBase}</p>
+            <p>Bonus por dificultad: +${bonus}</p>
             <p><strong>Total: ${puntosFinales} puntos</strong></p>
         </div>
     `;
@@ -1330,15 +1338,16 @@ function finalizarModoDesafio() {
 }
 
 // Modificar el botón de comenzar quiz para incluir modo desafío
-document.getElementById('comenzar-quiz').addEventListener('click', function(e) {
+document.getElementById('comenzar-quiz').addEventListener('click', function(e) { // Este es el único listener que necesitamos para este botón
     e.preventDefault();
     
     // Verificar si está activado el modo desafío
     const modoDesafioCheckbox = document.getElementById('modo-desafio');
     
-    if (modoDesafioCheckbox && modoDesafioCheckbox.checked) {
+    if (modoDesafioCheckbox?.checked) {
         iniciarModoDesafio();
     } else {
+        reiniciarEstadoQuiz();
         // Lógica normal del quiz (código existente)
         const tema = document.getElementById('select-tema').value;
         const dificultad = document.querySelector('input[name="dificultad"]:checked').value;
@@ -1353,7 +1362,7 @@ document.getElementById('comenzar-quiz').addEventListener('click', function(e) {
 });
 
 // Modificar el botón siguiente para manejar modo desafío
-document.getElementById('siguiente-pregunta').addEventListener('click', function() {
+document.getElementById('siguiente-pregunta').addEventListener('click', function() { // Unificamos la lógica del botón "Siguiente"
     if (modoDesafio) {
         indicePregunta++;
         if (indicePregunta < preguntasDesafio.length) {
